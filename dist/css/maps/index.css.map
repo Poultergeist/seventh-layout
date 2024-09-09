@@ -1,0 +1,1 @@
+{"version":3,"sources":["basic.scss"],"names":[],"mappings":"AAAQ;AAER;EACE;EACA;EACA","file":"../index.css","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');\n\n* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Varela Round\", sans-serif;\n}"]}
