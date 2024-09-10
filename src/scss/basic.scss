@@ -5,3 +5,16 @@
   padding: 0;
   font-family: "Varela Round", sans-serif;
 }
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 30px;
+  padding: 0;
+}
+
+body {
+  height: 5000px;
+}

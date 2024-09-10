@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 56" width="57" height="56" fill="fill">
+	<title>Rounded Rectangle 2</title>
+	<style>
+		tspan { white-space:pre } 
+		.s0 { fill: #0000;stroke: currentColor;stroke-linejoin: round;stroke-width: 3 } 
+		.t1 { font-size: 5px;fill: currentColor;font-weight: 400;font-family: "VarelaRound-Regular", "Varela Round" } 
+		.s2 { fill: currentColor } 
+	</style>
+	<path id="Ellipse" class="s0" d="m28 2c14.4 0 26 11.6 26 26 0 14.4-11.6 26-26 26-14.4 0-26-11.6-26-26 0-14.4 11.6-26 26-26z"/>
+	<text id="A" style="transform: matrix(7.642,0,0,7.642,15.062,38.655)" >
+		<tspan x="0" y="0" class="t1">A</tspan><tspan  y="0" class="t1">
+</tspan>
+	</text>
+	<path id="line" class="s2" d="m17 29h21c0.6 0 1 0.4 1 1v1c0 0.6-0.4 1-1 1h-21c-0.6 0-1-0.4-1-1v-1c0-0.6 0.4-1 1-1z"/>
+</svg>
