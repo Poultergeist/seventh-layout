@@ -158,16 +158,17 @@
 
   .cta {
     grid-column: 1/13;
+    @include flex(column, center, space-evenly);
 
     button {
-      padding: 0 2px;
       border: 2px white solid;
       height: 40px;
       font-size: 20px;
-      width: 160px;
+      width: 150px;
     }
 
     svg {
+      margin-top: 1px;
       height: 30px;
       width: 35px;
     }
