@@ -122,12 +122,13 @@
   }
 
   .cas {
-    font-size: 44px;
+    font-size: 64px;
   }
 
   .cta {
     flex-wrap: wrap;
     justify-content: space-evenly;
+    grid-column: 1/13;
 
     button {
       padding: 0 6px;
@@ -146,6 +147,12 @@
   }
 }
 
+@include adaptive(640px) {
+  .cas {
+    font-size: 44px;
+  }
+}
+
 @include adaptive(570px) {
   #banner {
     aspect-ratio: none;
@@ -157,7 +164,6 @@
   }
 
   .cta {
-    grid-column: 1/13;
     @include flex(column, center, space-evenly);
 
     button {

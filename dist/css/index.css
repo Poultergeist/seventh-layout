@@ -117,11 +117,12 @@
     grid-column: 1/13;
   }
   .cas {
-    font-size: 44px;
+    font-size: 64px;
   }
   .cta {
     flex-wrap: wrap;
     justify-content: space-evenly;
+    grid-column: 1/13;
   }
   .cta button {
     padding: 0 6px;
@@ -136,6 +137,11 @@
     margin: 0;
   }
 }
+@media screen and (max-width: 640px) {
+  .cas {
+    font-size: 44px;
+  }
+}
 @media screen and (max-width: 570px) {
   #banner {
     aspect-ratio: none;
@@ -145,7 +151,6 @@
     font-size: 30px;
   }
   .cta {
-    grid-column: 1/13;
     display: flex;
     flex-direction: column;
     align-items: center;
