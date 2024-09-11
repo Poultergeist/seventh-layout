@@ -2,16 +2,18 @@
 
 .why-ama-wrapper {
   @include flex(row, center, center);
-  height: 695px;
+  min-height: 695px;
+  padding-top: 94px;
+  padding-bottom: 87px;
 
   .container {
-    grid-template-rows: 0.295fr 1fr;
+    grid-template-rows: 0fr 1fr;
   }
 
 }
 
 .why {
-  @include flex(row, end, center);
+  @include flex(row, center, center);
   grid-column: 1/-1;
   grid-row: 1;
   font-family: "Montserrat", sans-serif;
@@ -19,12 +21,13 @@
   font-weight: 600;
   letter-spacing: 2.4px;
   word-spacing: -1px;
-  padding-left: 4px;
+  padding-left: 7px;
   line-height: 1.5;
-  transform: scaleY(1.05);
+  transform: scaleY(1.06);
+  padding-bottom: 50px;
 
   &-container {
-    padding-top: 60px;
+    padding-top: 10px;
     grid-row: 2;
     grid-column: 1/-1;
     display: grid;
@@ -59,10 +62,19 @@
   }
 }
 
-@include adaptive(959px) {
+@include adaptive(989px) {
+  .why-ama-wrapper {
+    padding-top: 0;
+
+    .container {
+      gap: 10px;
+    }
+  }
+
   .why {
     padding-top: 50px;
     padding-bottom: 15px;
+    font-size: 30px;
 
     &-container {
       padding-top: 0;
