@@ -3,8 +3,8 @@
 .why-ama-wrapper {
   @include flex(row, center, center);
   min-height: 695px;
-  padding-top: 94px;
-  padding-bottom: 87px;
+  padding-top: 96px;
+  padding-bottom: 111px;
 
   .container {
     grid-template-rows: 0fr 1fr;
@@ -24,7 +24,7 @@
   padding-left: 7px;
   line-height: 1.5;
   transform: scaleY(1.06);
-  padding-bottom: 50px;
+  padding-bottom: 47px;
 
   &-container {
     padding-top: 10px;

@@ -14,6 +14,9 @@
   overflow: hidden;
 }
 
+.banner-slider {
+  position: relative;
+}
 .banner-slider-wrapper {
   position: absolute;
   display: block;
@@ -25,11 +28,50 @@
   padding-top: 233px;
   left: -8px;
 }
+.banner-slider .slick-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: absolute;
+  left: 50.1%;
+  top: 66.7%;
+  color: white;
+  z-index: 3;
+}
+.banner-slider .slick-dots li {
+  font-size: 30px;
+  list-style: circle;
+  width: 19.5px;
+  padding-top: 2px;
+}
+.banner-slider .slick-dots li.slick-active {
+  font-size: 31px;
+  list-style: disc;
+  top: -1px;
+}
+.banner-slider .slick-dots li:focus-visible {
+  outline: none;
+  padding-top: 0;
+}
+.banner-slider .slick-dots button {
+  color: transparent;
+  background: none;
+  border: none;
+  position: relative;
+  left: -31px;
+}
+.banner-slider .slick-dots button:focus-visible {
+  outline: none;
+}
 .banner-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
   box-shadow: inset 0px -200px 500px #de5d5d;
+}
+.banner-wrapper, .banner-wrapper * {
+  pointer-events: none;
 }
 .banner-wrapper .container {
   height: 100%;
@@ -92,6 +134,7 @@
   font-size: 31px;
   letter-spacing: -0.3px;
   mix-blend-mode: lighten;
+  pointer-events: all;
 }
 .cta button:hover {
   background-color: white;
@@ -209,8 +252,8 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 695px;
-  padding-top: 94px;
-  padding-bottom: 87px;
+  padding-top: 96px;
+  padding-bottom: 111px;
 }
 .why-ama-wrapper .container {
   grid-template-rows: 0fr 1fr;
@@ -231,7 +274,7 @@ body {
   padding-left: 7px;
   line-height: 1.5;
   transform: scaleY(1.06);
-  padding-bottom: 50px;
+  padding-bottom: 47px;
 }
 .why-container {
   padding-top: 10px;
