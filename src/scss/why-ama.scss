@@ -1,0 +1,93 @@
+@import "partials";
+
+.why-ama-wrapper {
+  @include flex(row, center, center);
+  height: 695px;
+
+  .container {
+    grid-template-rows: 0.295fr 1fr;
+  }
+
+}
+
+.why {
+  @include flex(row, end, center);
+  grid-column: 1/-1;
+  grid-row: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 43px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  word-spacing: -1px;
+  padding-left: 4px;
+  line-height: 1.5;
+  transform: scaleY(1.05);
+
+  &-container {
+    padding-top: 60px;
+    grid-row: 2;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  &-element {
+    @include flex(column, center, flex-start);
+
+    h1 {
+      text-align: center;
+      font-size: 18px;
+      padding-top: 38px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 3px;
+    }
+
+    span {
+      width: 250px;
+      text-align: center;
+    }
+  }
+}
+
+.focus {
+
+  h1,
+  span {
+    margin-right: 15px;
+  }
+}
+
+@include adaptive(959px) {
+  .why {
+    padding-top: 50px;
+    padding-bottom: 15px;
+
+    &-container {
+      padding-top: 0;
+    }
+
+    &-element {
+      img {
+        height: 150px;
+      }
+
+      h1 {
+        padding-top: 24px;
+      }
+
+      span {
+        width: 200px;
+      }
+    }
+  }
+
+  .focus {
+
+    h1,
+    span {
+      margin-right: 0;
+    }
+  }
+}
