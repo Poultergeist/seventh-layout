@@ -236,6 +236,138 @@ body {
 }
 
 
+/* share.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+.share-block {
+  min-height: 735px;
+  background-color: #262626;
+  overflow: hidden;
+}
+.share-phone-slider-wrapper {
+  overflow: hidden;
+  padding-right: 5rem;
+  grid-column: span 6;
+}
+.share-content {
+  grid-column: span 5/12;
+  left: -2px;
+  padding-bottom: 4rem;
+}
+.share-content h1 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 46.2px;
+  padding-bottom: 0.8rem;
+}
+.share-content h2 {
+  font-size: 19px;
+  transform: scaleX(0.95);
+  transform-origin: left;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.video-slide {
+  width: 472px;
+}
+.video-button {
+  background-color: #de5d5d;
+  width: 171px;
+  font-size: 32px;
+  padding: 0 0.7rem !important;
+  margin: 1px;
+  border-radius: 0.28rem;
+}
+.video-slide span {
+  width: 269px;
+  padding-right: 21px;
+  transform: translateY(-4px);
+}
+.video-slider {
+  position: relative;
+}
+.video-slider .slick-track {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.video-slider .slick-list {
+  overflow: hidden;
+}
+.video-slider .slick-dots {
+  position: absolute;
+  color: white;
+  top: 121%;
+  left: 6.6%;
+  font-size: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.video-slider .slick-dots button {
+  background: none;
+  outline: none;
+  border: none;
+  color: transparent;
+  pointer-events: none;
+}
+.video-slider .slick-dots li {
+  list-style-type: circle;
+  cursor: pointer;
+  margin: -1px;
+  position: relative;
+}
+.video-slider .slick-dots li.slick-active {
+  list-style-type: disc;
+  top: -1px;
+  left: 1px;
+}
+.video-slider .slick-dots li.slick-active::marker {
+  font-size: 36px;
+}
+.video-slider-wrapper {
+  width: 472px !important;
+}
+
+@media screen and (max-width: 940px) {
+  .share-phone-slider-wrapper, .share-content {
+    grid-column: 1/-1;
+  }
+  .share-phone-slider-wrapper {
+    height: 300px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    z-index: 2;
+  }
+  .share-phone-slider {
+    max-width: 400px;
+    padding: 0 50px;
+    width: 100%;
+    z-index: 1;
+  }
+  .share-content {
+    box-shadow: 0 -100px 50px #262626;
+    position: inherit !important;
+    z-index: 2;
+  }
+  .video-slider-wrapper {
+    width: 90% !important;
+  }
+  .video-slide {
+    width: 100%;
+  }
+  .video-slide span {
+    width: 50%;
+  }
+}
+
+
 /* why-ama.css */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");

@@ -1,0 +1,151 @@
+@import "partials";
+
+.share {
+  &-block {
+    min-height: 735px;
+    background-color: $ligth-black;
+    overflow: hidden;
+  }
+
+  &-phone-slider-wrapper {
+    overflow: hidden;
+    padding-right: 5rem;
+    grid-column: span 6;
+  }
+
+  &-content {
+    grid-column: span 5/12;
+    left: -2px;
+    padding-bottom: 4rem;
+
+    h1 {
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 46.2px;
+      padding-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 19px;
+      transform: scaleX(0.95);
+      transform-origin: left;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.video {
+
+  &-slide {
+    width: 472px;
+  }
+
+  &-button {
+    background-color: $coral;
+    width: 171px;
+    font-size: 32px;
+    padding: 0 0.7rem !important;
+    margin: 1px;
+    border-radius: .28rem;
+  }
+
+  &-slide span {
+    width: 269px;
+    padding-right: 21px;
+    transform: translateY(-4px);
+  }
+
+  &-slider {
+    position: relative;
+
+    .slick {
+      &-track {
+        @include flex;
+      }
+
+      &-list {
+        overflow: hidden;
+      }
+
+      &-dots {
+        position: absolute;
+        color: white;
+        top: 121%;
+        left: 6.6%;
+        font-size: 34px;
+        @include flex;
+        
+        button {
+          background: none;
+          outline: none;
+          border: none;
+          color: transparent;
+          pointer-events: none;
+        }
+        
+        li {
+          list-style-type: circle;
+          cursor: pointer;
+          margin: -1px;
+          position: relative;
+          &.slick-active {
+            list-style-type: disc;
+            top: -1px;
+            left: 1px;
+
+            &::marker {
+              font-size: 36px;
+            }
+          }
+        }
+      }
+    }
+
+    &-wrapper {
+      width: 472px !important;
+    }
+  }
+}
+
+@include adaptive(940px) {
+  .share-phone-slider-wrapper, .share-content {
+    grid-column: 1/-1;
+  }
+
+  .share-phone-slider-wrapper {
+    height: 300px;
+    padding: 0;
+    @include flex(row, stretch, center);
+    z-index: 2;
+  }
+  
+  .share-phone-slider {
+    max-width: 400px;  
+    padding: 0 50px;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .share-content {
+    box-shadow: 0 -100px 50px $ligth-black;
+    position: inherit !important;
+    z-index: 2;
+  }
+
+  .video-slider-wrapper {
+    width: 90% !important;
+  }
+  
+  .video-slide {
+    width: 100%;
+
+    span {
+      width: 50%;
+    }
+  }
+}
+
+@include adaptive(595px) {
+
+}
