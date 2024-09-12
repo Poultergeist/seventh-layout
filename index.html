@@ -9,22 +9,25 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="dist/css/index.css">
 </head>
+
 <body>
-  <div id="banner">
-    <div class="banner-slider-wrapper">
+  <div id="banner" class="d-flex align-items-center justify-content-center position-relative">
+    <div class="banner-slider-wrapper  position-absolute  w-100">
       <div class="banner-slider">
-        <img src="img/iPhone 5C Red.png" alt="Red">
-        <img src="img/iPhone 5C Blue.png" alt="Blue">
-        <img src="img/iPhone 5C Green.png" alt="Green">
+        <img src="img/iPhone 5C Red.png" alt="Red" class="img-fluid">
+        <img src="img/iPhone 5C Blue.png" alt="Blue" class="img-fluid">
+        <img src="img/iPhone 5C Green.png" alt="Green" class="img-fluid">
       </div>
     </div>
-    <div class="banner-wrapper">
-      <div class="container">
-        <div class="banner-text">
-          <div class="cas">Capture and Share</div>
+    <div class="banner-wrapper  position-relative w-100 h-100">
+      <div class="container  h-100 w-100">
+        <div class="banner-text mb-3 d-flex flex-column align-items-center justify-content-end">
+          <div class="cas display-3 text-center text-white">Capture and Share</div>
         </div>
-        <div class="cta">
-          <button class="cta-appstore cta-button">
+        <div class="cta d-flex flex-row align-items-start justify-content-between">
+          <button
+            class="cta-appstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
+            border border-white rounded">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 56" width="57" height="56"
               fill="fill">
               <title>Rounded Rectangle 2</title>
@@ -63,7 +66,9 @@
             </svg>
             App Store
           </button>
-          <button class="cta-playstore cta-button">
+          <button
+            class="cta-playstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
+            border border-white rounded">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 54" width="47" height="54"
               fill="none">
               <style>
@@ -89,26 +94,26 @@
       </div>
     </div>
   </div>
-  <div class="why-ama-wrapper">
-    <div class="container">
-      <span class="why">Why ama?</span>
+  <div class="why-ama-wrapper pt-3 pb-4">
+    <div class="container pb-2">
+      <span class="why pb-5 d-flex flex-row align-items-center justify-content-center">Why ama?</span>
       <div class="why-container">
         <div class="why-element focus">
-          <img src="img/icons/Focus.png" alt="Focus">
-          <h1>Auto focus</h1>
-          <span>ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate. Sed auctor
+          <img src="img/icons/Focus.png" alt="Focus" class="img-fluid">
+          <h1 class="text-center">Auto focus</h1>
+          <span class="text-center">ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate. Sed auctor
           </span>
         </div>
         <div class="why-element">
-          <img src="img/icons/Touch ID.png" alt="Touch ID">
-          <h1>Secured with Touch ID</h1>
-          <span>ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate. Sed auctor
+          <img src="img/icons/Touch ID.png" alt="Touch ID" class="img-fluid">
+          <h1 class="text-center">Secured with Touch ID</h1>
+          <span class="text-center">ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate. Sed auctor
           </span>
         </div>
         <div class="why-element">
-          <img src="img/icons/Files.png" alt="Files">
-          <h1>Your Filters</h1>
-          <span>ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate. Sed auctor
+          <img src="img/icons/Files.png" alt="Files" class="img-fluid">
+          <h1 class="text-center">Your Filters</h1>
+          <span class="text-center">ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate. Sed auctor
           </span>
         </div>
       </div>

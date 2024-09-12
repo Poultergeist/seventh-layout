@@ -3,8 +3,6 @@
 .why-ama-wrapper {
   @include flex(row, center, center);
   min-height: 695px;
-  padding-top: 96px;
-  padding-bottom: 111px;
 
   .container {
     grid-template-rows: 0fr 1fr;
@@ -13,7 +11,6 @@
 }
 
 .why {
-  @include flex(row, center, center);
   grid-column: 1/-1;
   grid-row: 1;
   font-family: "Montserrat", sans-serif;
@@ -24,7 +21,6 @@
   padding-left: 7px;
   line-height: 1.5;
   transform: scaleY(1.06);
-  padding-bottom: 47px;
 
   &-container {
     padding-top: 10px;
@@ -39,7 +35,6 @@
     @include flex(column, center, flex-start);
 
     h1 {
-      text-align: center;
       font-size: 18px;
       padding-top: 38px;
       font-weight: 600;
@@ -49,7 +44,6 @@
 
     span {
       width: 250px;
-      text-align: center;
     }
   }
 }
@@ -64,7 +58,6 @@
 
 @include adaptive(989px) {
   .why-ama-wrapper {
-    padding-top: 0;
 
     .container {
       gap: 10px;

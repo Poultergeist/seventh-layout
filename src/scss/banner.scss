@@ -1,8 +1,6 @@
 @import "partials";
 
 #banner {
-  @include flex(row, center, center);
-  position: relative;
   height: 787px;
   background-color: $coral;
   overflow: hidden;
@@ -11,12 +9,6 @@
 .banner {
   &-slider {
     position: relative;
-
-    &-wrapper {
-      position: absolute;
-      display: block;
-      width: 100%;
-    }
 
     img {
       position: relative;
@@ -69,9 +61,6 @@
   }
 
   &-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
     box-shadow: inset 0px -200px 500px $coral;
 
     &,
@@ -86,14 +75,12 @@
   }
 
   &-text {
-    @include flex(column, center, flex-end);
     grid-column: 2/12;
 
   }
 }
 
 .cas {
-  color: white;
   font-size: 88px;
   font-weight: 600;
   letter-spacing: 0.8px;
@@ -114,22 +101,18 @@
 
 .cta {
   grid-column: 4/10;
-  @include flex(row, flex-start, space-between);
   padding-top: 61px;
   padding-left: 12px;
   padding-right: 15px;
 
   button {
-    @include flex(row, center, space-between);
     width: 257px;
     height: 77px;
     background: none;
-    border: 3px white solid;
-    border-radius: 5px;
+    border-width: 3px !important;
     padding-left: 18px;
     padding-right: 20px;
     transition: background-color 0.5s ease, color 0.5s ease;
-    color: white;
     font-size: 31px;
     letter-spacing: -0.3px;
     mix-blend-mode: lighten;
@@ -137,7 +120,7 @@
 
     &:hover {
       background-color: white;
-      color: black;
+      color: black !important;
     }
   }
 
@@ -177,10 +160,11 @@
 
   .cta {
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly !important;
     grid-column: 1/13;
 
     button {
+      border-width: 2px !important;
       padding: 0 6px;
       height: 58px;
       width: 200px;
@@ -214,8 +198,6 @@
   }
 
   .cta {
-    @include flex(column, center, space-evenly);
-
     padding-top: 21px;
     padding-bottom: 25px;
 

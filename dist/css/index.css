@@ -4,11 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 #banner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   height: 787px;
   background-color: #de5d5d;
   overflow: hidden;
@@ -16,11 +11,6 @@
 
 .banner-slider {
   position: relative;
-}
-.banner-slider-wrapper {
-  position: absolute;
-  display: block;
-  width: 100%;
 }
 .banner-slider img {
   position: relative;
@@ -67,9 +57,6 @@
   outline: none;
 }
 .banner-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
   box-shadow: inset 0px -200px 500px #de5d5d;
 }
 .banner-wrapper,
@@ -81,15 +68,10 @@
   grid-template-rows: 1.1fr 1fr;
 }
 .banner-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
   grid-column: 2/12;
 }
 
 .cas {
-  color: white;
   font-size: 88px;
   font-weight: 600;
   letter-spacing: 0.8px;
@@ -112,28 +94,18 @@
 
 .cta {
   grid-column: 4/10;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
   padding-top: 61px;
   padding-left: 12px;
   padding-right: 15px;
 }
 .cta button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   width: 257px;
   height: 77px;
   background: none;
-  border: 3px white solid;
-  border-radius: 5px;
+  border-width: 3px !important;
   padding-left: 18px;
   padding-right: 20px;
   transition: background-color 0.5s ease, color 0.5s ease;
-  color: white;
   font-size: 31px;
   letter-spacing: -0.3px;
   mix-blend-mode: lighten;
@@ -141,7 +113,7 @@
 }
 .cta button:hover {
   background-color: white;
-  color: black;
+  color: black !important;
 }
 .cta svg {
   width: 54px;
@@ -171,10 +143,11 @@
   }
   .cta {
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly !important;
     grid-column: 1/13;
   }
   .cta button {
+    border-width: 2px !important;
     padding: 0 6px;
     height: 58px;
     width: 200px;
@@ -201,10 +174,6 @@
     font-size: 28px;
   }
   .cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
     padding-top: 21px;
     padding-bottom: 25px;
   }
@@ -248,12 +217,9 @@
 
 .container {
   max-width: 1200px;
-  width: 100%;
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 30px;
-  padding: 0 15px;
 }
 
 body {
@@ -270,18 +236,12 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 695px;
-  padding-top: 96px;
-  padding-bottom: 111px;
 }
 .why-ama-wrapper .container {
   grid-template-rows: 0fr 1fr;
 }
 
 .why {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   grid-column: 1/-1;
   grid-row: 1;
   font-family: "Montserrat", sans-serif;
@@ -292,7 +252,6 @@ body {
   padding-left: 7px;
   line-height: 1.5;
   transform: scaleY(1.06);
-  padding-bottom: 47px;
 }
 .why-container {
   padding-top: 10px;
@@ -309,7 +268,6 @@ body {
   justify-content: flex-start;
 }
 .why-element h1 {
-  text-align: center;
   font-size: 18px;
   padding-top: 38px;
   font-weight: 600;
@@ -318,7 +276,6 @@ body {
 }
 .why-element span {
   width: 250px;
-  text-align: center;
 }
 
 .focus h1,
@@ -327,9 +284,6 @@ body {
 }
 
 @media screen and (max-width: 989px) {
-  .why-ama-wrapper {
-    padding-top: 0;
-  }
   .why-ama-wrapper .container {
     gap: 10px;
   }
