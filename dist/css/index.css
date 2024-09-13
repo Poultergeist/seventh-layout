@@ -310,7 +310,7 @@ body {
   }
   .share-phone-slider {
     max-width: 400px;
-    padding: 0 50px;
+    padding: 0 70px;
     width: 100%;
     z-index: 1;
   }
@@ -338,7 +338,11 @@ body {
     width: 90% !important;
   }
   .video-slider .slick-dots {
+    transform: translate(-50%);
     left: 50%;
+  }
+  .video-slider .slick-dots li button {
+    border-width: 1px;
   }
   .video-slide {
     width: 100%;
