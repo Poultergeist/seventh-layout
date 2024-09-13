@@ -18,44 +18,26 @@
     }
 
     .slick-dots {
-      @include flex;
       position: absolute;
-      left: 50.1%;
-      top: 66.7%;
-      color: white;
+      transform: translate(-50%);
+      left: 50%;
+      top: 67.6%;
+      display: flex;
       z-index: 3;
-
-      li {
-        font-size: 30px;
-        list-style: circle;
-        width: 19.5px;
-        padding-top: 2px;
-
-        &.slick-active {
-          font-size: 31px;
-          list-style: disc;
-          padding-top: 1px;
-          margin-left: 1px;
-          margin-right: -1px;
-        }
-
-        &:focus-visible {
-          outline: none;
-          padding-top: 0;
-        }
-      }
-
+      list-style: none;
 
       button {
+        margin: 3.7px;
+        border: white 2px solid;
+        border-radius: 50%;
         color: transparent;
         background: none;
-        border: none;
-        position: relative;
-        left: -31px;
+        height: 12px;
+        width: 12px;
+      }
 
-        &:focus-visible {
-          outline: none;
-        }
+      .slick-active button{
+        background-color: white;
       }
     }
   }
@@ -233,14 +215,6 @@
       &-dots {
         position: absolute;
         top: 90%;
-
-        li {
-          font-size: 27px;
-
-          &.slick-active {
-            font-size: 29px;
-          }
-        }
       }
     }
 

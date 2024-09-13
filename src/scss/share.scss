@@ -74,34 +74,26 @@
       }
 
       &-dots {
-        position: absolute;
-        color: white;
-        top: 121%;
-        left: 6.6%;
-        font-size: 34px;
         @include flex;
-
-        button {
-          background: none;
-          outline: none;
-          border: none;
-          color: transparent;
-          pointer-events: none;
-        }
+        position: absolute;
+        list-style: none;
+        top: 143%;
+        left: 2px;
 
         li {
-          list-style-type: circle;
-          cursor: pointer;
-          margin: -1px;
-          position: relative;
+          button {
+            margin-right: 7px;
+            border: white solid 2px;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            color: transparent;
+            background: none;
+          }
 
-          &.slick-active {
-            list-style-type: disc;
-            top: -1px;
-            left: 1px;
-
-            &::marker {
-              font-size: 36px;
+          &.slick-active{
+            button {
+              background-color: white;
             }
           }
         }
