@@ -240,7 +240,7 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 .share-block {
-  min-height: 735px;
+  height: 735px;
   background-color: #262626;
   overflow: hidden;
 }
@@ -270,6 +270,10 @@ body {
 
 .video-slide {
   width: 472px;
+  height: 100%;
+}
+.video-slide-wrapper {
+  height: 96px;
 }
 .video-button {
   background-color: #de5d5d;
@@ -333,8 +337,15 @@ body {
 }
 
 @media screen and (max-width: 940px) {
-  .share-phone-slider-wrapper, .share-content {
+  .share-phone-slider-wrapper,
+  .share-content {
     grid-column: 1/-1;
+  }
+  .share-phone-slider {
+    max-width: 400px;
+    padding: 0 50px;
+    width: 100%;
+    z-index: 1;
   }
   .share-phone-slider-wrapper {
     height: 300px;
@@ -345,25 +356,63 @@ body {
     justify-content: center;
     z-index: 2;
   }
-  .share-phone-slider {
-    max-width: 400px;
-    padding: 0 50px;
-    width: 100%;
-    z-index: 1;
-  }
   .share-content {
     box-shadow: 0 -100px 50px #262626;
     position: inherit !important;
     z-index: 2;
   }
+  .share-block {
+    height: auto;
+  }
+  .share-block .container {
+    gap: 10px;
+  }
   .video-slider-wrapper {
     width: 90% !important;
   }
+  .video-slider .slick-dots {
+    left: 50%;
+  }
   .video-slide {
     width: 100%;
+    padding: 0 10%;
   }
   .video-slide span {
     width: 50%;
+  }
+}
+@media screen and (max-width: 595px) {
+  .share-content h1 {
+    font-size: 32px;
+    padding-bottom: 0.6rem;
+  }
+  .share-content h2 {
+    font-size: 16px;
+    padding-bottom: 2rem !important;
+  }
+  .video-slider-wrapper {
+    width: 100% !important;
+  }
+  .video-slide {
+    padding: 0;
+  }
+  .video-slide span {
+    padding: 0;
+    width: 40%;
+    font-size: 12px;
+  }
+  .video-slide-wrapper {
+    height: auto;
+  }
+  .video-button {
+    padding: 0 0.3rem !important;
+    font-size: 16px;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .video-slide span {
+    font-size: 9px;
   }
 }
 
