@@ -191,6 +191,10 @@
     &-slider {
       height: 93px;
 
+      &.pt-4 {
+        padding-top: 1rem !important;
+      }
+
       &-wrapper {
         height: auto;
         box-shadow: 100px 33px 0 0 $gray;

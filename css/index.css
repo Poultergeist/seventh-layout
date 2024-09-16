@@ -377,6 +377,9 @@ html::-webkit-scrollbar {
   .features-slider {
     height: 93px;
   }
+  .features-slider.pt-4 {
+    padding-top: 1rem !important;
+  }
   .features-slider-wrapper {
     height: auto;
     box-shadow: 100px 33px 0 0 #313131;
