@@ -91,7 +91,7 @@
             background: none;
           }
 
-          &.slick-active{
+          &.slick-active {
             button {
               background-color: white;
             }
@@ -101,7 +101,7 @@
     }
 
     &-wrapper {
-      width: 472px !important;
+      width: 472px;
     }
   }
 }
@@ -146,7 +146,7 @@
   .video {
     &-slider {
       &-wrapper {
-        width: 90% !important;
+        width: 572px;
       }
 
       .slick-dots {
@@ -185,7 +185,7 @@
 
   .video {
     &-slider-wrapper {
-      width: 100% !important;
+      width: 340px;
     }
 
     &-slide {
@@ -193,7 +193,7 @@
 
       span {
         padding: 0;
-        width: 40%;
+        width: 200px;
         font-size: 12px;
       }
 
@@ -211,7 +211,15 @@
 }
 
 @include adaptive(420px) {
-  .video-slide span {
-    font-size: 9px;
+  .video {
+    &-slider-wrapper {
+      width: 300px !important;
+    }
+
+    &-slide span {
+      font-size: 11px;
+      transform: none;
+      width: 160px;
+    }
   }
 }

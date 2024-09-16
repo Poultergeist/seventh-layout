@@ -221,6 +221,200 @@ html::-webkit-scrollbar {
 }
 
 
+/* features.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+.features-block {
+  height: 802px;
+  background-color: #313131;
+  overflow: hidden;
+}
+.features-block .container {
+  padding-top: 3.95rem;
+}
+
+.features-content {
+  grid-column: span 5/7;
+}
+.features-content h1 {
+  padding-top: 6.3rem;
+  font-size: 49px;
+  font-family: "Montserrat";
+  word-spacing: 1.9px;
+  transform: translate(-2px) scaleX(0.97);
+  font-weight: 600;
+  transform-origin: left;
+}
+.features-content h2 {
+  font-size: 18.4px;
+  padding-top: 0.9rem;
+  padding-left: 0.1rem;
+  word-spacing: -1px;
+  line-height: 1.45;
+}
+.features-phone {
+  grid-column: span 6;
+  padding-left: 1.72rem;
+  padding-right: 1.38rem;
+}
+.features-phone-slider {
+  overflow: hidden;
+}
+.features-img {
+  margin: 0 3rem;
+  padding: 2rem 0;
+  -webkit-filter: drop-shadow(0px 10px 25px black);
+  filter: drop-shadow(0px 10px 25px black);
+}
+.features-slider {
+  border-radius: 5px;
+  background-color: white;
+  height: 233px;
+  overflow: hidden;
+}
+.features-slider .slick-track {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.features-slider .slick-dots {
+  margin-top: 29px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: 14px;
+  padding-bottom: 5px;
+  padding-left: 35px;
+  list-style: none;
+  background-color: #de5d5d;
+}
+.features-slider .slick-dots button {
+  margin-right: 8px;
+  color: transparent;
+  background: none;
+  border: 2px white solid;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.features-slider .slick-dots .slick-active button {
+  background-color: white;
+}
+.features-slider-wrapper {
+  margin-top: 4.15rem;
+  height: 233px;
+  width: 471px;
+  margin-left: 2px;
+}
+.features-slide img {
+  padding-right: 26px;
+}
+.features-slide h3 {
+  font-size: 19px;
+  padding-top: 2px;
+  letter-spacing: 0.1px;
+  color: #de5d5d;
+}
+.features-slide-wrapper {
+  padding-top: 0.45rem;
+  padding-left: 1.95rem;
+}
+
+@media screen and (max-width: 1030px) {
+  .features-phone {
+    height: 400px;
+    overflow: hidden;
+  }
+  .features-slider-wrapper {
+    position: absolute;
+    width: 95%;
+    z-index: 5;
+    box-shadow: 100px 39px 0 0 #313131;
+  }
+  .features-slider-wrapper::before {
+    content: "";
+    box-shadow: 100px -39px 30px 10px #313131;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .features-slider .slick-dots {
+    margin-top: 52px;
+  }
+  .features-content {
+    grid-column: span 6/7;
+  }
+  .features-block {
+    height: 672px;
+  }
+  .features-img {
+    margin: 0 1rem;
+    filter: drop-shadow(0px 5px 10px black);
+  }
+}
+@media screen and (max-width: 930px) {
+  .features-block {
+    height: 613px;
+  }
+  .features-block .container {
+    gap: 10px;
+  }
+  .features-content h1 {
+    font-size: 23px;
+  }
+  .features-content h2 {
+    font-size: 12px;
+    width: 310px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .features-phone {
+    padding: 0;
+  }
+  .features-slider {
+    height: 93px;
+  }
+  .features-slider-wrapper {
+    height: auto;
+    box-shadow: 100px 33px 0 0 #313131;
+    margin-top: 1.15rem;
+    width: 90%;
+  }
+  .features-content h1 {
+    font-size: 16px;
+    padding-top: 2.3rem;
+  }
+  .features-content h2 {
+    width: 150px;
+  }
+  .features-slide img {
+    padding-bottom: 0 !important;
+    height: 60px;
+    padding-right: 5px;
+  }
+  .features-slide h3 {
+    font-size: 12px;
+  }
+  .features-slide span {
+    font-size: 8px;
+  }
+  .features-slide-wrapper {
+    height: 60px;
+    width: 184px;
+    padding: 0 1rem !important;
+  }
+  .features-block {
+    height: 351px;
+  }
+  .features-block .container {
+    padding-top: 0.95rem;
+  }
+}
+
+
 /* share.css */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
@@ -308,7 +502,7 @@ html::-webkit-scrollbar {
   background-color: white;
 }
 .video-slider-wrapper {
-  width: 472px !important;
+  width: 472px;
 }
 
 @media screen and (max-width: 940px) {
@@ -343,7 +537,7 @@ html::-webkit-scrollbar {
     gap: 10px;
   }
   .video-slider-wrapper {
-    width: 90% !important;
+    width: 572px;
   }
   .video-slider .slick-dots {
     transform: translate(-50%);
@@ -370,14 +564,14 @@ html::-webkit-scrollbar {
     padding-bottom: 2rem !important;
   }
   .video-slider-wrapper {
-    width: 100% !important;
+    width: 340px;
   }
   .video-slide {
     padding: 0;
   }
   .video-slide span {
     padding: 0;
-    width: 40%;
+    width: 200px;
     font-size: 12px;
   }
   .video-slide-wrapper {
@@ -390,8 +584,13 @@ html::-webkit-scrollbar {
   }
 }
 @media screen and (max-width: 420px) {
+  .video-slider-wrapper {
+    width: 300px !important;
+  }
   .video-slide span {
-    font-size: 9px;
+    font-size: 11px;
+    transform: none;
+    width: 160px;
   }
 }
 

@@ -25,4 +25,24 @@ $(document).ready(function() {
     dots: true,
     asNavFor: ".share-phone-slider"
   });
+
+  $('.features-phone-slider').slick({
+    arrows: false,
+    adaptiveHeight: false,
+    infinite: true,
+    dots: false,
+    fade: true,
+    zIndex: 3,
+    asNavFor: ".features-slider"
+  });
+
+  $('.features-slider').slick({
+    arrows: false,
+    adaptiveHeight: false,
+    autoplay: false,
+    infinite: true,
+    dots: true,
+    asNavFor: ".features-phone-slider"
+  });
 });
+
