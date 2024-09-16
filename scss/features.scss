@@ -1,17 +1,13 @@
 @import "partials";
 
-.features-block {
+.features {
   height: 802px;
   background-color: $gray;
   overflow: hidden;
+  padding-top: 3.95rem;
 
-  .container {
-    padding-top: 3.95rem;
-  }
-}
+  &__content {
 
-.features {
-  &-content {
     grid-column: span 5/7;
 
     h1 {
@@ -30,27 +26,11 @@
       padding-left: 0.1rem;
       word-spacing: -1px;
       line-height: 1.45;
+      color: $ligth-gray;
     }
   }
 
-  &-phone {
-    grid-column: span 6;
-    padding-left: 1.72rem;
-    padding-right: 1.38rem;
-
-    &-slider {
-      overflow: hidden;
-    }
-  }
-
-  &-img {
-    margin: 0 3rem;
-    padding: 2rem 0;
-    -webkit-filter: drop-shadow(0px 10px 25px black);
-    filter: drop-shadow(0px 10px 25px black);
-  }
-
-  &-slider {
+  &__slider {
     border-radius: 5px;
     background-color: white;
     height: 233px;
@@ -69,7 +49,7 @@
         padding-bottom: 5px;
         padding-left: 35px;
         list-style: none;
-        background-color: $coral;
+        background-color: $ligth-coral;
 
         button {
           margin-right: 8px;
@@ -95,7 +75,25 @@
     }
   }
 
-  &-slide {
+  &__phone {
+
+    grid-column: span 6;
+    padding-left: 1.72rem;
+    padding-right: 1.38rem;
+
+    &-slider {
+      overflow: hidden;
+    }
+
+    &-img {
+      margin: 0 3rem;
+      padding: 2rem 0;
+      -webkit-filter: drop-shadow(0px 10px 25px black);
+      filter: drop-shadow(0px 10px 25px black);
+    }
+  }
+
+  &__slide {
     img {
       padding-right: 26px;
     }
@@ -104,7 +102,11 @@
       font-size: 19px;
       padding-top: 2px;
       letter-spacing: 0.1px;
-      color: $coral;
+      color: $dark-coral;
+    }
+
+    span {
+      color: $soft-gray;
     }
 
     &-wrapper {
@@ -116,13 +118,14 @@
 
 @include adaptive(1030px) {
   .features {
+    height: 672px;
 
-    &-phone {
+    &__phone {
       height: 400px;
       overflow: hidden;
     }
-    
-    &-slider {
+
+    &__slider {
       &-wrapper {
         position: absolute;
         width: 95%;
@@ -143,15 +146,12 @@
       }
     }
 
-    &-content {
+    &__content {
       grid-column: span 6/7;
     }
 
-    &-block {
-      height: 672px;
-    }
 
-    &-img {
+    &__phone-img {
       margin: 0 1rem;
       filter: drop-shadow(0px 5px 10px black);
     }
@@ -160,16 +160,9 @@
 
 @include adaptive(930px) {
   .features {
+    height: 613px;
 
-    &-block {
-      height: 613px;
-
-      .container {
-        gap: 10px
-      }
-    }
-
-    &-content {
+    &__content {
       h1 {
         font-size: 23px;
       }
@@ -184,11 +177,14 @@
 
 @include adaptive(550px) {
   .features {
-    &-phone {
+    height: 351px;
+    padding-top: 0.95rem;
+
+    &__phone {
       padding: 0;
     }
 
-    &-slider {
+    &__slider {
       height: 93px;
 
       &.pt-4 {
@@ -204,7 +200,7 @@
 
     }
 
-    &-content {
+    &__content {
       h1 {
         font-size: 16px;
         padding-top: 2.3rem;
@@ -215,7 +211,7 @@
       }
     }
 
-    &-slide {
+    &__slide {
       img {
         padding-bottom: 0 !important;
         height: 60px;
@@ -234,14 +230,6 @@
         height: 60px;
         width: 184px;
         padding: 0 1rem !important
-      }
-    }
-
-    &-block {
-      height: 351px;
-
-      .container {
-        padding-top: 0.95rem;
       }
     }
   }

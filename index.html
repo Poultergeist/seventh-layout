@@ -11,21 +11,21 @@
 </head>
 
 <body>
-  <div id="banner" class="d-flex align-items-center justify-content-center position-relative">
-    <div class="banner-slider-wrapper  position-absolute  w-100">
-      <div class="banner-slider">
+  <div id="banner" class="banner d-flex align-items-center justify-content-center position-relative">
+    <div class="banner__background  position-absolute  w-100">
+      <div class="banner__slider position-relative">
         <img src="img/iPhone 5C Red.png" alt="Red" class="img-fluid">
         <img src="img/iPhone 5C Blue.png" alt="Blue" class="img-fluid">
         <img src="img/iPhone 5C Green.png" alt="Green" class="img-fluid">
       </div>
     </div>
-    <div class="banner-wrapper  position-relative w-100 h-100">
+    <div class="banner__foreground  position-relative w-100 h-100">
       <div class="container  h-100 w-100">
-        <div class="banner-text mb-2 d-flex flex-column align-items-center justify-content-end">
-          <div class="cas mb-1 display-3 text-center text-white">Capture and Share</div>
+        <div class="banner__text mb-2 d-flex flex-column align-items-center justify-content-end">
+          <div class="mb-1 display-3 text-center text-white">Capture and Share</div>
         </div>
-        <div class="cta d-flex flex-row align-items-start justify-content-between">
-          <button class="cta-appstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
+        <div class="banner__cta d-flex flex-row align-items-start justify-content-between">
+          <button class="banner__appstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
             border border-white rounded">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 56" width="57" height="56"
               fill="fill">
@@ -65,7 +65,7 @@
             </svg>
             App Store
           </button>
-          <button class="cta-playstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
+          <button class="banner__playstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
             border border-white rounded">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 54" width="47" height="54"
               fill="none">
@@ -92,25 +92,25 @@
       </div>
     </div>
   </div>
-  <div class="why-ama-wrapper pt-3 pb-4">
+  <div class="why-ama pt-3 pb-4 d-flex flex-row justify-content-center align-items-center">
     <div class="container pb-2">
-      <span class="why pb-5 d-flex flex-row align-items-center justify-content-center">Why ama?</span>
-      <div class="why-container">
-        <div class="why-element focus">
+      <span class="why-ama__title pb-5 d-flex flex-row align-items-center justify-content-center">Why ama?</span>
+      <div class="why-ama__why">
+        <div class="why-ama__why-element why-ama__why-element_focus d-flex flex-column justify-content-start align-items-center">
           <img src="img/icons/Focus.png" alt="Focus" class="img-fluid">
           <h1 class="text-center">Auto focus</h1>
           <span class="text-center">ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate.
             Sed auctor
           </span>
         </div>
-        <div class="why-element">
+        <div class="why-ama__why-element d-flex flex-column justify-content-start align-items-center">
           <img src="img/icons/Touch ID.png" alt="Touch ID" class="img-fluid">
           <h1 class="text-center">Secured with Touch ID</h1>
           <span class="text-center">ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate.
             Sed auctor
           </span>
         </div>
-        <div class="why-element">
+        <div class="why-ama__why-element d-flex flex-column justify-content-start align-items-center">
           <img src="img/icons/Files.png" alt="Files" class="img-fluid">
           <h1 class="text-center">Your Filters</h1>
           <span class="text-center">ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate.
@@ -121,39 +121,39 @@
     </div>
   </div>
   </div>
-  <div class="share-block">
+  <div class="share">
     <div class="container h-100 pt-5 position-relative">
-      <div class="share-phone-slider-wrapper">
-        <div class="share-phone-slider h-100">
+      <div class="share__phone-slider-wrapper">
+        <div class="share__phone-slider h-100">
           <img class="img-fluid ml-2 mt-4" src="img/4 Right view Red.png" alt="Red">
           <img class="img-fluid ml-2 mt-4" src="img/4 Right view Green.png" alt="Green">
           <img class="img-fluid ml-2 mt-4" src="img/4 Right view Blue.png" alt="Blue">
         </div>
       </div>
 
-      <div class="share-content d-flex flex-column align-items-center justify-content-center h-100 position-absolute">
+      <div class="share__content d-flex flex-column align-items-center justify-content-center h-100 position-absolute">
         <h1 class="text-white text-left w-100">Share instantly</h1>
-        <h2 class="text-white text-left w-100 pb-5">Mauris euismod ultrices nisl sit amet luctus. Donec volutpat arcu
+        <h2 class="text-left w-100 pb-5">Mauris euismod ultrices nisl sit amet luctus. Donec volutpat arcu
           ullamcorper facilisis vulputate. Sed auctor pulvinar ornare. Donec gravida</h2>
-        <div class="video-slider-wrapper pt-1">
-          <div class="video-slider">
-            <div class="video-slide-wrapper">
-              <div class="video-slide d-flex flex-row justify-content-between">
-                <button class="video-button btn text-center text-white"><i class="fa-solid fa-play"></i></button>
+        <div class="share__slider-wrapper pt-1">
+          <div class="share__slider">
+            <div class="share__slide-wrapper">
+              <div class="share__slide d-flex flex-row justify-content-between">
+                <button class="share__video-button btn text-center text-white"><i class="fa-solid fa-play"></i></button>
+                <span class="text-left">Mauris euismod ultrices nisi sit amet luctus. Donec volutpat arcu
+                  ullamcorper facilisis vulputate. Sed auctor pulvinar.</span>
+              </div>
+            </div>
+            <div class="share__slide-wrapper">
+              <div class="share__slide d-flex flex-row justify-content-between">
+                <button class="share__video-button btn text-center text-white"><i class="fa-solid fa-play"></i></button>
                 <span class="text-white text-left">Mauris euismod ultrices nisi sit amet luctus. Donec volutpat arcu
                   ullamcorper facilisis vulputate. Sed auctor pulvinar.</span>
               </div>
             </div>
-            <div class="video-slide-wrapper">
-              <div class="video-slide d-flex flex-row justify-content-between">
-                <button class="video-button btn text-center text-white"><i class="fa-solid fa-play"></i></button>
-                <span class="text-white text-left">Mauris euismod ultrices nisi sit amet luctus. Donec volutpat arcu
-                  ullamcorper facilisis vulputate. Sed auctor pulvinar.</span>
-              </div>
-            </div>
-            <div class="video-slide-wrapper">
-              <div class="video-slide d-flex flex-row justify-content-between">
-                <button class="video-button btn text-center text-white"><i class="fa-solid fa-play"></i></button>
+            <div class="share__slide-wrapper">
+              <div class="share__slide d-flex flex-row justify-content-between">
+                <button class="share__video-button btn text-center text-white"><i class="fa-solid fa-play"></i></button>
                 <span class="text-white text-left">Mauris euismod ultrices nisi sit amet luctus. Donec volutpat arcu
                   ullamcorper facilisis vulputate. Sed auctor pulvinar.</span>
               </div>
@@ -163,16 +163,16 @@
       </div>
     </div>
   </div>
-  <div class="features-block w-100">
+  <div class="features w-100">
     <div class="container w-100 h-100">
-      <div class="features-content">
+      <div class="features__content">
         <h1 class="text-white">New Features</h1>
-        <h2 class="text-white">Mauris euismod ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate. Sed
+        <h2>Mauris euismod ultrices nisl sit amet luctus. Donec volutpat arcu ullamcorper facilisis vulputate. Sed
           auctor pulvinar ornare. Donec gravida.</h2>
-        <div class="features-slider-wrapper">
-          <div class="features-slider pt-4">
-            <div class="features-slide-wrapper h-100 pr-5">
-              <div class="features-slide d-flex flex-row justify-content-center align-items-center">
+        <div class="features__slider-wrapper">
+          <div class="features__slider pt-4">
+            <div class="features__slide-wrapper h-100 pr-5">
+              <div class="features__slide d-flex flex-row justify-content-center align-items-center">
                 <img class="img-fluid pb-3" src="img/icons/Brush.png" alt="Brush">
                 <div>
                   <h3>Color your photos</h3>
@@ -181,8 +181,8 @@
                 </div>
               </div>
             </div>
-            <div class="features-slide-wrapper h-100 pr-5">
-              <div class="features-slide d-flex flex-row justify-content-center align-items-center">
+            <div class="features__slide-wrapper h-100 pr-5">
+              <div class="features__slide d-flex flex-row justify-content-center align-items-center">
                 <img class="img-fluid pb-3" src="img/icons/Brush.png" alt="Brush">
                 <div>
                   <h3>Color your photos</h3>
@@ -191,8 +191,8 @@
                 </div>
               </div>
             </div>
-            <div class="features-slide-wrapper h-100 pr-5">
-              <div class="features-slide d-flex flex-row justify-content-center align-items-center">
+            <div class="features__slide-wrapper h-100 pr-5">
+              <div class="features__slide d-flex flex-row justify-content-center align-items-center">
                 <img class="img-fluid pb-3" src="img/icons/Brush.png" alt="Brush">
                 <div>
                   <h3>Color your photos</h3>
@@ -201,8 +201,8 @@
                 </div>
               </div>
             </div>
-            <div class="features-slide-wrapper h-100 pr-5">
-              <div class="features-slide d-flex flex-row justify-content-center align-items-center">
+            <div class="features__slide-wrapper h-100 pr-5">
+              <div class="features__slide d-flex flex-row justify-content-center align-items-center">
                 <img class="img-fluid pb-3" src="img/icons/Brush.png" alt="Brush">
                 <div>
                   <h3>Color your photos</h3>
@@ -211,8 +211,8 @@
                 </div>
               </div>
             </div>
-            <div class="features-slide-wrapper h-100 pr-5">
-              <div class="features-slide d-flex flex-row justify-content-center align-items-center">
+            <div class="features__slide-wrapper h-100 pr-5">
+              <div class="features__slide d-flex flex-row justify-content-center align-items-center">
                 <img class="img-fluid pb-3" src="img/icons/Brush.png" alt="Brush">
                 <div>
                   <h3>Color your photos</h3>
@@ -221,8 +221,8 @@
                 </div>
               </div>
             </div>
-            <div class="features-slide-wrapper h-100 pr-5">
-              <div class="features-slide d-flex flex-row justify-content-center align-items-center">
+            <div class="features__slide-wrapper h-100 pr-5">
+              <div class="features__slide d-flex flex-row justify-content-center align-items-center">
                 <img class="img-fluid pb-3" src="img/icons/Brush.png" alt="Brush">
                 <div>
                   <h3>Color your photos</h3>
@@ -231,8 +231,8 @@
                 </div>
               </div>
             </div>
-            <div class="features-slide-wrapper h-100 pr-5">
-              <div class="features-slide d-flex flex-row justify-content-center align-items-center">
+            <div class="features__slide-wrapper h-100 pr-5">
+              <div class="features__slide d-flex flex-row justify-content-center align-items-center">
                 <img class="img-fluid pb-3" src="img/icons/Brush.png" alt="Brush">
                 <div>
                   <h3>Color your photos</h3>
@@ -244,15 +244,15 @@
           </div>
         </div>
       </div>
-      <div class="features-phone">
-        <div class="features-phone-slider">
-          <img class="features-img" src="img/Nexus.png" alt="Nexus">
-          <img class="features-img" src="img/Nexus.png" alt="Nexus">
-          <img class="features-img" src="img/Nexus.png" alt="Nexus">
-          <img class="features-img" src="img/Nexus.png" alt="Nexus">
-          <img class="features-img" src="img/Nexus.png" alt="Nexus">
-          <img class="features-img" src="img/Nexus.png" alt="Nexus">
-          <img class="features-img" src="img/Nexus.png" alt="Nexus">
+      <div class="features__phone">
+        <div class="features__phone-slider">
+          <img class="features__phone-img" src="img/Nexus.png" alt="Nexus">
+          <img class="features__phone-img" src="img/Nexus.png" alt="Nexus">
+          <img class="features__phone-img" src="img/Nexus.png" alt="Nexus">
+          <img class="features__phone-img" src="img/Nexus.png" alt="Nexus">
+          <img class="features__phone-img" src="img/Nexus.png" alt="Nexus">
+          <img class="features__phone-img" src="img/Nexus.png" alt="Nexus">
+          <img class="features__phone-img" src="img/Nexus.png" alt="Nexus">
         </div>
       </div>
     </div>

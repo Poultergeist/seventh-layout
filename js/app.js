@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.banner-slider').slick({
+  $('.banner__slider').slick({
     arrows: false,
     adaptiveHeight: false,
     autoplay: true,
@@ -8,41 +8,41 @@ $(document).ready(function() {
     dots: true
   });
 
-  $('.share-phone-slider').slick({
+  $('.share__phone-slider').slick({
     arrows: false,
     adaptiveHeight: false,
     autoplay: false,
     infinite: true,
     fade: true,
-    asNavFor: ".video-slider"
+    asNavFor: ".share__slider"
   });
 
-  $('.video-slider').slick({
+  $('.share__slider').slick({
     arrows: false,
     adaptiveHeight: false,
     autoplay: false,
     infinite: true,
     dots: true,
-    asNavFor: ".share-phone-slider"
+    asNavFor: ".share__phone-slider"
   });
 
-  $('.features-phone-slider').slick({
+  $('.features__phone-slider').slick({
     arrows: false,
     adaptiveHeight: false,
     infinite: true,
     dots: false,
     fade: true,
     zIndex: 3,
-    asNavFor: ".features-slider"
+    asNavFor: ".features__slider"
   });
 
-  $('.features-slider').slick({
+  $('.features__slider').slick({
     arrows: false,
     adaptiveHeight: false,
     autoplay: false,
     infinite: true,
     dots: true,
-    asNavFor: ".features-phone-slider"
+    asNavFor: ".features__phone-slider"
   });
 });
 

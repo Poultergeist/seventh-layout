@@ -1,98 +1,92 @@
 @import "partials";
 
-.why-ama-wrapper {
-  @include flex(row, center, center);
+.why-ama {
   min-height: 695px;
 
   .container {
     grid-template-rows: 0fr 1fr;
   }
 
-}
 
-.why {
-  grid-column: 1/-1;
-  grid-row: 1;
-  font-family: "Montserrat", sans-serif;
-  font-size: 43px;
-  font-weight: 600;
-  letter-spacing: 2.4px;
-  word-spacing: -1px;
-  padding-left: 7px;
-  line-height: 1.5;
-  transform: scaleY(1.06);
+  &__title {
+    grid-column: 1/-1;
+    grid-row: 1;
+    font-family: "Montserrat", sans-serif;
+    font-size: 43px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+    word-spacing: -1px;
+    padding-left: 7px;
+    line-height: 1.5;
+    transform: scaleY(1.06);
+  }
 
-  &-container {
+  &__why {
     padding-top: 10px;
     grid-row: 2;
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
-  }
 
-  &-element {
-    @include flex(column, center, flex-start);
+    &-element {
+      @include flex(column, center, flex-start);
 
-    h1 {
-      font-size: 18px;
-      padding-top: 38px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      margin-bottom: 3px;
+      h1 {
+        font-size: 18px;
+        padding-top: 38px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        margin-bottom: 3px;
+      }
+
+      span {
+        width: 250px;
+      }
+
+      &_focus {
+
+        h1,
+        span {
+          margin-right: 15px;
+        }
+      }
     }
-
-    span {
-      width: 250px;
-    }
-  }
-}
-
-.focus {
-
-  h1,
-  span {
-    margin-right: 15px;
   }
 }
 
 @include adaptive(989px) {
-  .why-ama-wrapper {
-
-    .container {
-      gap: 10px;
+  .why-ama {
+    &__title {
+      padding-top: 50px;
+      padding-bottom: 15px;
+      font-size: 30px;
     }
-  }
 
-  .why {
-    padding-top: 50px;
-    padding-bottom: 15px;
-    font-size: 30px;
-
-    &-container {
+    &__why {
       padding-top: 0;
-    }
 
-    &-element {
-      img {
-        height: 150px;
+      &-element {
+        img {
+          height: 150px;
+        }
+
+        h1 {
+          padding-top: 24px;
+        }
+
+        span {
+          width: 200px;
+        }
+
+        &_focus {
+
+          h1,
+          span {
+            margin-right: 0;
+          }
+        }
       }
-
-      h1 {
-        padding-top: 24px;
-      }
-
-      span {
-        width: 200px;
-      }
-    }
-  }
-
-  .focus {
-
-    h1,
-    span {
-      margin-right: 0;
     }
   }
 }
