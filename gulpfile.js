@@ -19,17 +19,17 @@ function addFileHeader() {
 }
 
 gulp.task('sass', function() {
-  return gulp.src('./src/scss/**/*.scss')
+  return gulp.src('./scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(addFileHeader())
     .pipe(concat('index.css'))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
+  gulp.watch('./scss/**/*.scss', gulp.series('sass'));
 });
 
 gulp.task('default', gulp.series('sass', 'watch'));
