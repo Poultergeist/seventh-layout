@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $('.banner__slider').slick({
     arrows: false,
     adaptiveHeight: false,
@@ -44,5 +44,53 @@ $(document).ready(function() {
     dots: true,
     asNavFor: ".features__phone-slider"
   });
+
+  $('.taken__photos').slick({
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    adaptiveHeight: false,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 });
 
+const likes = document.querySelectorAll(".taken__likes");
+
+likes.forEach(like => {
+  like.addEventListener("click", function () {
+    const isLiked = this.classList.contains("liked");
+    const likeCountElement = this.querySelector(".taken__likes-count");
+    let likeCount = parseInt(likeCountElement.textContent);
+
+    if (!isLiked) {
+      this.classList.add("liked")
+      likeCount++;
+    }
+    else {
+      this.classList.remove("liked")
+      likeCount--;
+    }
+    likeCountElement.textContent = likeCount;
+  })
+});

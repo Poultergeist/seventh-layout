@@ -1,0 +1,163 @@
+@import "partials";
+
+.taken {
+  &__title {
+    grid-column: 2/-1;
+    padding-top: 4.2rem;
+
+    h1 {
+      font-size: 49px;
+      font-family: "Montserrat";
+      margin-left: -4px;
+      color: $ligth-coral;
+      font-weight: 500;
+      transform: scaleX(0.963);
+      transform-origin: left;
+    }
+
+    h2 {
+      font-size: 18px;
+      padding-top: 0.8rem;
+      word-spacing: 0.4px;
+      line-height: 1.5;
+      width: 470px;
+    }
+  }
+
+  &__photos {
+    padding-top: 4.2rem;
+    overflow: hidden;
+
+    .slick-track {
+      @include flex;
+    }
+  }
+
+  &__photo-container {
+    aspect-ratio: 1/1.039;
+
+    &:hover {
+      .taken__image {
+        transform: translateY(-37px);
+        height: 90.5% !important;
+      }
+    }
+  }
+
+  &__photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  &__additional {
+    z-index: 1;
+    background-color: $black;
+    color: #c2c2c2;
+    padding: 6%;
+    padding-right: 34px;
+
+    >span {
+      font-size: 18.1px;
+      font-weight: 500;
+      padding-bottom: 2px;
+    }
+  }
+
+  &__likes {
+    color: $ligth-coral;
+
+    svg {
+      color: transparent;
+      --outline: #f06464;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    &-count {
+      font-size: 24px;
+      padding-left: 3px;
+    }
+  }
+}
+
+.liked {
+  svg {
+    color: $ligth-coral;
+  }
+}
+
+@include adaptive(1100px) {
+  .taken {
+    &__additional {
+      span {
+        font-size: 14px;
+      }
+    }
+
+    &__likes {
+      svg {
+        padding-bottom: 3px;
+        padding-top: 5px;
+      }
+
+      &-count {
+        font-size: 21px;
+        padding-left: 0;
+      }
+    }
+
+    &__photo-container:hover {
+      .taken__image {
+        transform: translateY(-18px);
+        height: 90.5% !important;
+      }
+    }
+  }
+}
+
+@include adaptive(850px) {
+  .taken {
+    &__title {
+      padding-top: 2.1rem;
+
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 12px;
+        width: 270px;
+      }
+    }
+
+    &__photos {
+      padding-top: 2.1rem;
+    }
+  }
+}
+
+// .taken__additional > span {
+//   font-size: 18.1px;
+//   font-size: 14.1px;
+//   }
+//   .taken__likes-count {
+//   font-size: 24px;
+//   padding-left: 3px;
+//   font-size: 21px;
+//   padding-left: 0px;
+//   }
+//   Element
+//   div.taken__photo-container:nth-child(5) > div:nth-child(2) > div:nth-child(2) > svg:nth-child(1) {
+//   padding-bottom: 3px;
+//   }
+//   Element
+//   div.taken__photo-container:nth-child(5) > div:nth-child(2) {
+//   padding-bottom: 22px;
+//   }
