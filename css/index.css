@@ -60,6 +60,7 @@ html::-webkit-scrollbar {
   font-weight: 600;
   letter-spacing: 0.8px;
   font-family: "Montserrat";
+  color: inherit;
   padding-right: 3px;
   transform: scaleX(0.98);
 }
@@ -97,9 +98,8 @@ html::-webkit-scrollbar {
   grid-column: 4/10;
 }
 .banner__cta button {
-  background: none;
+  background-color: none;
   border: 2px solid white;
-  color: black;
   width: 257px;
   height: 77px;
   font-size: 30.2px;
@@ -221,12 +221,13 @@ html::-webkit-scrollbar {
   grid-template-rows: 0fr 1fr;
 }
 .why-ama__title {
-  grid-column: 1/-1;
-  grid-row: 1;
-  font-family: "Montserrat", sans-serif;
   font-size: 43px;
   font-weight: 600;
   letter-spacing: 2.4px;
+  font-family: "Montserrat";
+  color: default;
+  grid-column: 1/-1;
+  grid-row: 1;
   word-spacing: -1px;
   padding-left: 7px;
   line-height: 1.5;
@@ -248,9 +249,11 @@ html::-webkit-scrollbar {
 }
 .why-ama__why-element h1 {
   font-size: 18px;
-  padding-top: 38px;
   font-weight: 600;
   letter-spacing: 0.3px;
+  font-family: "Varela Round";
+  color: default;
+  padding-top: 38px;
   margin-bottom: 3px;
 }
 .why-ama__why-element span {
@@ -305,15 +308,19 @@ html::-webkit-scrollbar {
   font-weight: 600;
   letter-spacing: 0;
   font-family: "Montserrat";
+  color: default;
   padding-bottom: 0.8rem;
 }
 .share__content h2 {
   font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-family: "Varela Round";
+  color: #aeaeae;
   transform: scaleX(0.95);
   transform-origin: left;
   line-height: 1.4;
   margin-bottom: 0;
-  color: #aeaeae;
 }
 .share__slide {
   width: 472px;
@@ -329,6 +336,11 @@ html::-webkit-scrollbar {
   color: #aeaeae;
 }
 .share__video-button {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-family: "Varela Round";
+  color: default;
   background-color: #de5d5d;
   width: 171px;
   font-size: 32px;
@@ -471,19 +483,24 @@ html::-webkit-scrollbar {
 .features__content h1 {
   padding-top: 6.3rem;
   font-size: 49px;
+  font-weight: 600;
+  letter-spacing: 0;
   font-family: "Montserrat";
+  color: default;
   word-spacing: 1.9px;
   transform: translate(-2px) scaleX(0.97);
-  font-weight: 600;
   transform-origin: left;
 }
 .features__content h2 {
   font-size: 18.4px;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-family: "Varela Round";
+  color: #aeaeae;
   padding-top: 0.9rem;
   padding-left: 0.1rem;
   word-spacing: -1px;
   line-height: 1.45;
-  color: #aeaeae;
 }
 .features__slider {
   border-radius: 5px;
@@ -547,9 +564,11 @@ html::-webkit-scrollbar {
 }
 .features__slide h3 {
   font-size: 19px;
-  padding-top: 2px;
+  font-weight: 500;
   letter-spacing: 0.1px;
+  font-family: "Varela Round";
   color: #cc5858;
+  padding-top: 2px;
 }
 .features__slide span {
   color: #666666;
@@ -654,10 +673,11 @@ html::-webkit-scrollbar {
 }
 .taken__title h1 {
   font-size: 49px;
-  font-family: "Montserrat";
-  margin-left: -4px;
-  color: #f06464;
   font-weight: 500;
+  letter-spacing: 0;
+  font-family: "Montserrat";
+  color: #f06464;
+  margin-left: -4px;
   transform: scaleX(0.963);
   transform-origin: left;
 }
@@ -758,6 +778,141 @@ html::-webkit-scrollbar {
   }
   .taken__photos {
     padding-top: 2.1rem;
+  }
+}
+/* download */
+.download {
+  background-color: #de5d5d;
+  padding: 10.7rem 0;
+}
+.download__logo {
+  grid-column: 1/6;
+}
+.download__image {
+  position: relative;
+  margin: 0 29px 25px 0;
+}
+.download__image img {
+  position: relative;
+  z-index: 2;
+}
+.download__image::after {
+  content: "";
+  width: 90%;
+  height: 120%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(37deg) translate(35%, -9%);
+  border-radius: 29px 0 0 13px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
+}
+.download__info {
+  grid-column: 6/-2;
+  padding-bottom: 3.9rem;
+}
+.download__info h1 {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  font-family: "Varela Round";
+  color: default;
+  line-height: 1.13;
+}
+.download__info h2 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  font-family: "Varela Round";
+  color: default;
+}
+.download__cta {
+  height: 27%;
+  row-gap: 1rem;
+}
+.download__cta button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid white;
+  width: 45%;
+  height: 100%;
+  font-size: 30.6px;
+  padding-left: 18px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border-width: 3px !important;
+  pointer-events: all;
+  mix-blend-mode: lighten;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.download__cta button:hover {
+  background-color: white;
+  color: black !important;
+}
+.download__cta button {
+  margin-right: 5%;
+  padding-left: 16px;
+  min-width: 200px;
+  max-width: 256.5px;
+}
+.download__cta button svg {
+  padding: 2px 0;
+}
+.download__cta button div {
+  padding-bottom: 0.2rem;
+  letter-spacing: -0.3px;
+  padding-right: 0.1rem;
+}
+.download__playstore {
+  padding-left: 23px !important;
+}
+.download__playstore svg {
+  padding: 0 !important;
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 1150px) {
+  .download__cta {
+    flex-wrap: wrap;
+  }
+  .download button {
+    font-size: 20px;
+    text-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 850px) {
+  .download {
+    padding: 5rem 0;
+  }
+  .download__logo, .download__info {
+    grid-column: 1/-1;
+  }
+  .download__info {
+    padding: 0;
+  }
+  .download__info h1 {
+    font-size: 30px;
+  }
+  .download__cta {
+    width: 100%;
+    justify-content: space-evenly !important;
+  }
+  .download button {
+    height: 90% !important;
+    padding: 0 10px !important;
+  }
+  .download button svg {
+    width: 40px;
+    height: 40px;
+  }
+  .download__image {
+    width: 170px;
+    height: 170px;
+  }
+  .download__image img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
   }
 }
 /*# sourceMappingURL=maps/index.css.map */
