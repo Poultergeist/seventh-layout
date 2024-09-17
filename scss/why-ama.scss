@@ -9,12 +9,9 @@
 
 
   &__title {
+    @include text-styles(43px, 600, 2.4px, "Montserrat");
     grid-column: 1/-1;
     grid-row: 1;
-    font-family: "Montserrat", sans-serif;
-    font-size: 43px;
-    font-weight: 600;
-    letter-spacing: 2.4px;
     word-spacing: -1px;
     padding-left: 7px;
     line-height: 1.5;
@@ -33,10 +30,8 @@
       @include flex(column, center, flex-start);
 
       h1 {
-        font-size: 18px;
+        @include text-styles(18px, 600, 0.3px);
         padding-top: 38px;
-        font-weight: 600;
-        letter-spacing: 0.3px;
         margin-bottom: 3px;
       }
 

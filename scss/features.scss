@@ -12,21 +12,18 @@
 
     h1 {
       padding-top: 6.3rem;
-      font-size: 49px;
-      font-family: "Montserrat";
+      @include text-styles(49px, 600, 0, "Montserrat");
       word-spacing: 1.9px;
       transform: translate(-2px) scaleX(0.97);
-      font-weight: 600;
       transform-origin: left;
     }
 
     h2 {
-      font-size: 18.4px;
+      @include text-styles(18.4px, $color: $ligth-gray);
       padding-top: 0.9rem;
       padding-left: 0.1rem;
       word-spacing: -1px;
       line-height: 1.45;
-      color: $ligth-gray;
     }
   }
 
@@ -99,10 +96,8 @@
     }
 
     h3 {
-      font-size: 19px;
+      @include text-styles(19px, $letter-spacing: 0.1px, $color: $dark-coral);
       padding-top: 2px;
-      letter-spacing: 0.1px;
-      color: $dark-coral;
     }
 
     span {

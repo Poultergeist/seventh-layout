@@ -17,19 +17,16 @@
     padding-bottom: 4rem;
 
     h1 {
-      font-family: "Montserrat";
-      font-weight: 600;
-      font-size: 46.2px;
+      @include text-styles(46.2px, 600, 0, "Montserrat");
       padding-bottom: 0.8rem;
     }
 
     h2 {
-      font-size: 19px;
+      @include text-styles(19px, $color: $ligth-gray);
       transform: scaleX(0.95);
       transform-origin: left;
       line-height: 1.4;
       margin-bottom: 0;
-      color: $ligth-gray;
     }
   }
 
@@ -50,6 +47,7 @@
   }
 
   &__video-button {
+    @include text-styles(32px);
     background-color: $coral;
     width: 171px;
     font-size: 32px;

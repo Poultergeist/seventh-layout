@@ -23,12 +23,9 @@
     grid-column: 2/12;
 
     >div {
-      font-size: 88px;
-      font-weight: 600;
-      letter-spacing: 0.8px;
+      @include text-styles(88px, 600, 0.8px, "Montserrat", inherit);
       padding-right: 3px;
       transform: scaleX(0.98);
-      font-family: "Montserrat", sans-srif;
     }
   }
 
@@ -66,29 +63,11 @@
   }
 
   &__cta {
-    grid-column: 4/10;
     padding-top: 61px;
     padding-left: 12px;
     padding-right: 15px;
-
-    button {
-      width: 257px;
-      height: 77px;
-      background: none;
-      border-width: 3px !important;
-      padding-left: 18px;
-      padding-right: 20px;
-      transition: background-color 0.5s ease, color 0.5s ease;
-      font-size: 31px;
-      letter-spacing: -0.3px;
-      mix-blend-mode: lighten;
-      pointer-events: all;
-
-      &:hover {
-        background-color: white;
-        color: black !important;
-      }
-    }
+    grid-column: 4/10;
+    @include button-styles($background-color: none, $border-color: white, $color: black, $width: 257px, $height: 77px, $font-size: 30.2px);
 
     svg {
       width: 54px;
@@ -145,10 +124,6 @@
       svg {
         height: 40px;
       }
-    }
-
-    &__playstore>svg {
-      margin: 0;
     }
   }
 }

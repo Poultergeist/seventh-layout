@@ -6,11 +6,8 @@
     padding-top: 4.2rem;
 
     h1 {
-      font-size: 49px;
-      font-family: "Montserrat";
+      @include text-styles(49px, 500, 0, "Montserrat", $ligth-coral);
       margin-left: -4px;
-      color: $ligth-coral;
-      font-weight: 500;
       transform: scaleX(0.963);
       transform-origin: left;
     }
@@ -96,6 +93,7 @@
 @include adaptive(1100px) {
   .taken {
     &__additional {
+      padding: 4%;
       span {
         font-size: 14px;
       }
@@ -142,22 +140,3 @@
     }
   }
 }
-
-// .taken__additional > span {
-//   font-size: 18.1px;
-//   font-size: 14.1px;
-//   }
-//   .taken__likes-count {
-//   font-size: 24px;
-//   padding-left: 3px;
-//   font-size: 21px;
-//   padding-left: 0px;
-//   }
-//   Element
-//   div.taken__photo-container:nth-child(5) > div:nth-child(2) > div:nth-child(2) > svg:nth-child(1) {
-//   padding-bottom: 3px;
-//   }
-//   Element
-//   div.taken__photo-container:nth-child(5) > div:nth-child(2) {
-//   padding-bottom: 22px;
-//   }
