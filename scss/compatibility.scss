@@ -3,6 +3,7 @@
 .compatibility {
   padding-top: 5.15rem;
   padding-bottom: 7.5rem;
+  background-color: #e7e7e7;
 
   &__title {
     grid-column: 2/-2;
@@ -41,7 +42,7 @@
       padding-right: 20px;
       line-height: 1.5;
       margin-bottom: 1.55rem;
-      letter-spacing: 0.05px;
+      letter-spacing: 0.03px;
     }
   }
 }
