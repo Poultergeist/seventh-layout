@@ -962,6 +962,10 @@ html::-webkit-scrollbar {
   }
 }
 @media screen and (max-width: 550px) {
+  .compatibility {
+    padding-top: 1.15rem;
+    padding-bottom: 2.5rem;
+  }
   .compatibility svg {
     max-width: 240px;
   }

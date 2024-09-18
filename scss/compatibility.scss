@@ -57,6 +57,9 @@
 
 @include adaptive(550px) {
   .compatibility {
+    padding-top: 1.15rem;
+    padding-bottom: 2.5rem;
+
     svg {
       max-width: 240px;
     }
