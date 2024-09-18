@@ -143,3 +143,24 @@ function changeStyle(targetId, result) {
     document.getElementById(`${targetId}-ancor`).classList.remove("active");
   }
 }
+
+$("#email-form").submit(function(e) {
+  e.preventDefault();
+  $('.alert-success').css({
+    'padding': '3px',
+    'height': 'auto'
+  });
+});
+
+$('.share__video-button').on('click', function() {
+  $(this).replaceWith(`<iframe class="share__video-button" width="${$(this).outerWidth()}" height="${$(this).outerHeight()}" src="https://www.youtube.com/embed/1FWK-TM0S08?si=91k-J66cvXiaMXw2&amp;controls=0;&autoplay=1;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`)
+})
+
+$('.cta-button').on('click', function () {
+  if($(this).hasClass('playstore')) {
+    window.open('https://play.google.com/store/apps/details?id=com.adobe.lrmobile&hl=uk&pli=1');
+  }
+  if($(this).hasClass('appstore')){
+    window.open('https://apps.apple.com/ua/app/lightroom-%D0%B4%D0%BB%D1%8F-%D1%84%D0%BE%D1%82%D0%BE-%D1%96-%D0%B2%D1%96%D0%B4%D0%B5%D0%BE/id878783582?l=uk')
+  }
+})

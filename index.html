@@ -31,10 +31,18 @@
             <li id="features-ancor" class="nav-item"><a href="#features" class="text-white">Features</a></li>
             <li id="taken-ancor" class="nav-item"><a href="#taken" class="text-white">Gallery</a></li>
             <li id="download-ancor" class="nav-item"><a href="#download" class="text-white">Download</a></li>
-            <li id="compatibility-ancor" class="nav-item"><a href="#compatibility" class="text-white">Compatibility</a></li>
+            <li id="compatibility-ancor" class="nav-item"><a href="#compatibility" class="text-white">Compatibility</a>
+            </li>
           </ul>
         </div>
       </nav>
+    </div>
+    <div class="alert alert-success" role="alert">
+      You did it!!! You send out your email to take more ads on your mailbox that you never gonna see and <a
+        class="alert-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">never gonna give you up...</a><button
+        type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
   </header>
   <div id="banner" class="jump-block banner d-flex align-items-center justify-content-center position-relative">
@@ -51,7 +59,7 @@
           <div class="mb-1 display-3 text-center text-white">Capture and Share</div>
         </div>
         <div class="banner__cta d-flex flex-row align-items-start justify-content-between">
-          <button class="banner__appstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
+          <button class="banner__appstore appstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
             border border-white rounded">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 56" width="57" height="56"
               fill="fill">
@@ -90,7 +98,7 @@
             </svg>
             App Store
           </button>
-          <button class="banner__playstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
+          <button class="banner__playstore playstore cta-button btn text-white btn-lg d-flex flex-row align-items-center justify-content-between
             border border-white rounded">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 54" width="47" height="54"
               fill="none">
@@ -172,14 +180,14 @@
             <div class="share__slide-wrapper">
               <div class="share__slide d-flex flex-row justify-content-between">
                 <button class="share__video-button btn text-center text-white"><i class="fa-solid fa-play"></i></button>
-                <span class="text-white text-left">Mauris euismod ultrices nisi sit amet luctus. Donec volutpat arcu
+                <span class="text-left">Mauris euismod ultrices nisi sit amet luctus. Donec volutpat arcu
                   ullamcorper facilisis vulputate. Sed auctor pulvinar.</span>
               </div>
             </div>
             <div class="share__slide-wrapper">
               <div class="share__slide d-flex flex-row justify-content-between">
                 <button class="share__video-button btn text-center text-white"><i class="fa-solid fa-play"></i></button>
-                <span class="text-white text-left">Mauris euismod ultrices nisi sit amet luctus. Donec volutpat arcu
+                <span class="text-left">Mauris euismod ultrices nisi sit amet luctus. Donec volutpat arcu
                   ullamcorper facilisis vulputate. Sed auctor pulvinar.</span>
               </div>
             </div>
@@ -376,7 +384,7 @@
         <h2 class="text-white pt-2 pb-4">- Newyork Times</h2>
         <div class="download__cta pt-2 d-flex flex-row align-items-center justify-content-between">
           <button
-            class="download__appstore text-white h-100 d-flex flex-row align-items-center justify-content-between">
+            class="download__appstore appstore cta-button text-white h-100 d-flex flex-row align-items-center justify-content-between">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 56" width="57" height="56"
               fill="fill">
               <style>
@@ -415,7 +423,7 @@
             <div>App Store</div>
           </button>
           <button
-            class="download__playstore text-white h-100 d-flex flex-row align-items-center justify-content-between">
+            class="download__playstore playstore cta-button text-white h-100 d-flex flex-row align-items-center justify-content-between">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 54" width="47" height="54"
               fill="none">
               <style>
@@ -506,9 +514,9 @@
       <div class="footer__subscribe d-flex flex-column align-items-end">
         <div>
           <h1 class="pb-2">Subscribe our email newsletter.</h1>
-          <form class="footer__email-form d-flex justify-content-between">
+          <form id="email-form" class="footer__email-form d-flex justify-content-between">
             <input type="email" name="email" id="subscribe-email" placeholder="Your email" required>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>

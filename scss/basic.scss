@@ -15,7 +15,7 @@
 
 html {
   scroll-behavior: smooth;
-  
+
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -33,4 +33,12 @@ html {
   .container {
     column-gap: 10px;
   }
+}
+
+.alert-success {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
 }

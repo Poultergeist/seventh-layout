@@ -50,6 +50,8 @@
       }
 
       &:focus {
+        background-color: $ligth-coral;
+        border: none;
         box-shadow: 0 0 0 .2rem transparentize($ligth-coral, 0.5) !important;
       }
     }
