@@ -1,0 +1,136 @@
+@import "partials";
+
+.header {
+  z-index: 10;
+  background-color: $coral;
+  transition: box-shadow 0.3s ease;
+
+  nav {
+    padding: 0;
+  }
+
+  .navbar {
+    grid-column: 1/-1;
+
+    &-toggler-icon {
+      width: 2.3rem;
+      height: 2.5rem;
+
+      div {
+        background-color: white;
+        height: 0.2rem;
+        margin: 0.1rem 0.2rem;
+        border-radius: .1rem;
+        transform-origin: left;
+        transition: height 0.3s ease, border-radius 0.3s ease, transform 0.3s ease;
+
+        &:first-child {
+          height: 0.5rem;
+          border-radius: .4rem .4rem .1rem .1rem;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            transition: opacity 0.3s ease;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 4px 3px, $coral 0%, $coral 4%, transparent 4%),
+              radial-gradient(circle at 13px 6px, $coral 0%, $coral 4%, transparent 4%),
+              radial-gradient(circle at 21px 2px, $coral 0%, $coral 5%, transparent 5%);
+            background-repeat: no-repeat;
+          }
+        }
+
+        &:nth-child(2) {
+          transition: opacity 0.3s ease, margin 0.3s ease;
+          margin: 0.05rem 0.3rem;
+        }
+
+        &:last-child {
+          height: 0.3rem;
+          border-radius: .1rem .1rem .2rem .2rem;
+        }
+      }
+    }
+
+    &-brand {
+      @include text-styles(3.4rem, 700, 0, "Montserrat");
+      padding-top: 0.2rem;
+      transform: scaleX(0.9);
+      transform-origin: left;
+    }
+
+    &-nav {
+      padding-top: 1rem;
+      font-size: 18.5px;
+      font-weight: 600;
+      padding-right: 1px;
+
+      li {
+        letter-spacing: -0.4px;
+
+        &:not(:last-child) {
+          padding-right: 2.55rem;
+        }
+
+      }
+    }
+
+    &-collapse {
+      transition: height 0.3s ease;
+      overflow: hidden;
+      height: 100%
+    }
+  }
+}
+
+@include adaptive(992px) {
+  .navbar-nav {
+    @include flex(column !important, center !important, center !important);
+
+    li {
+      padding: 0.05rem 0 !important;
+      font-size: 14px;
+    }
+  }
+
+  .navbar-collapse {
+    height: 175px;
+  }
+}
+
+.drop-shadow {
+
+  &,
+  &-expand {
+    box-shadow: 0 0 8px 5px;
+  }
+}
+
+.burger-active .navbar-toggler-icon div {
+  &::before {
+    opacity: 0;
+  }
+
+  &:first-child,
+  &:last-child {
+    height: 0.2rem;
+    border-radius: 0.1rem;
+  }
+
+  &:first-child {
+    transform: rotate(30deg);
+  }
+
+  &:nth-child(2) {
+    opacity: 0;
+    margin: 0.15rem 1rem;
+  }
+
+  &:last-child {
+    transform: rotate(-30deg);
+  }
+}

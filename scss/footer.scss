@@ -1,0 +1,109 @@
+@import "partials";
+
+.footer {
+  padding-top: 3.8rem;
+  padding-bottom: 5rem;
+
+  &__copyrigth {
+    grid-column: 1/7;
+    @include text-styles(17.7px, 600, 0, "Montserrat", $soft-gray);
+  }
+
+  &__subscribe {
+    grid-column: 7/-1;
+    padding-right: 3rem;
+
+    h1 {
+      @include text-styles(1.1rem, 500, -0.7px, $color: $soft-gray);
+    }
+  }
+
+  &__email-form {
+    height: 3rem;
+    width: 26.5rem;
+
+    input {
+      width: 73.5%;
+      padding: 10px 15px 11px;
+      border-radius: 3px;
+      border: 1px solid $ligth-gray;
+      transition: box-shadow 0.3s ease, border 0.3s ease;
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0.1rem .2rem transparentize($blue, 0.5);
+        border-color: $blue;
+      }
+    }
+
+    button {
+      width: 24%;
+      background-color: $ligth-coral;
+      border: none;
+
+      &:hover {
+        background-color: $coral;
+      }
+
+      &:active {
+        background-color: $dark-coral !important;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 .2rem transparentize($ligth-coral, 0.5) !important;
+      }
+    }
+  }
+}
+
+@include adaptive(900px) {
+  .footer__subscribe {
+    padding: 0;
+  }
+}
+
+@include adaptive(780px) {
+  .footer {
+    padding: 1rem 0;
+
+    &__copyrigth,
+    &__subscribe {
+      grid-column: 1/-1;
+      @include flex(row, center !important, center !important);
+      padding-bottom: 2rem;
+    }
+
+    &__copyrigth {
+      order: 2;
+    }
+  }
+}
+
+@include adaptive(460px) {
+  .footer {
+
+    &__copyrigth {
+      font-size: 14px;
+    }
+
+    &__email-form {
+      height: 2.5rem;
+      width: 18rem;
+
+      input {
+        width: 69.5%;
+        font-size: 0.8rem;
+      }
+
+      button {
+        width: 28%;
+        font-size: 0.8rem;
+      }
+    }
+
+    &__copyrigth,
+    &__subscribe {
+      padding-bottom: 1rem;
+    }
+  }
+}
