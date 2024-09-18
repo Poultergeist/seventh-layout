@@ -109,6 +109,12 @@ function scrollCheck() {
   for (i = 0; i < targets.length; i++) {
     targetsVisibilityCheck(targets[i], targets[i - 1], targets[i + 1])
   }
+
+  if($('body')[0].getBoundingClientRect().top == 0) {
+    $('.header').removeClass('drop-shadow');
+  } else {
+    $('.header').addClass('drop-shadow');
+  }
 }
 
 setTimeout(scrollCheck, 10);
