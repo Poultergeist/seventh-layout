@@ -132,6 +132,9 @@ html::-webkit-scrollbar {
     margin: 0.05rem 0 !important;
     font-size: 14px;
   }
+  .header .navbar-nav li::before {
+    display: none;
+  }
   .header .navbar-collapse {
     height: 175px;
   }
