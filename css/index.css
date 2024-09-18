@@ -110,7 +110,7 @@ html::-webkit-scrollbar {
   top: -40px;
 }
 .header .navbar-nav li.active::before {
-  height: 3px;
+  height: 4px;
 }
 .header .navbar-nav li:not(:last-child) {
   margin-right: 2.55rem;
