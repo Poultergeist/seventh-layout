@@ -553,7 +553,7 @@ html::-webkit-scrollbar {
     z-index: 2;
   }
   .share__content {
-    box-shadow: 0 -100px 50px #262626;
+    box-shadow: 0 -20px 20px 20px #262626;
     position: inherit !important;
     z-index: 2;
   }
