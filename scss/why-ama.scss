@@ -50,12 +50,11 @@
   }
 }
 
-@include adaptive(989px) {
+@include adaptive(929px) {
   .why-ama {
     &__title {
       padding-top: 50px;
       padding-bottom: 15px;
-      font-size: 30px;
     }
 
     &__why {

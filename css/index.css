@@ -82,7 +82,7 @@ html::-webkit-scrollbar {
 }
 .header .navbar-toggler-icon div:nth-child(2) {
   transition: opacity 0.3s ease, margin 0.3s ease;
-  margin: 0.05rem 0.3rem;
+  margin: 0.04rem 0.3rem;
 }
 .header .navbar-toggler-icon div:last-child {
   height: 0.3rem;
@@ -402,11 +402,10 @@ html::-webkit-scrollbar {
   margin-right: 15px;
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 929px) {
   .why-ama__title {
     padding-top: 50px;
     padding-bottom: 15px;
-    font-size: 30px;
   }
   .why-ama__why {
     padding-top: 0;
@@ -735,6 +734,7 @@ html::-webkit-scrollbar {
     content: "";
     box-shadow: 100px -39px 30px 10px #313131;
     position: absolute;
+    pointer-events: none;
     width: 100%;
     height: 100%;
   }
