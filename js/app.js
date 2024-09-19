@@ -78,28 +78,20 @@ $(document).ready(function () {
 });
 
 // likes logic
-const likes = document.querySelectorAll(".taken__likes");
-
-likes.forEach(like => {
-  like.addEventListener("click", function () {
-    const isLiked = this.classList.contains("liked");
-    const likeCountElement = this.querySelector(".taken__likes-count");
-    let likeCount = parseInt(likeCountElement.textContent);
-
-    if (!isLiked) {
-      this.classList.add("liked")
-      likeCount++;
-    }
-    else {
-      this.classList.remove("liked")
-      likeCount--;
-    }
-    likeCountElement.textContent = likeCount;
-  })
+$('.taken__photos').on('click', '.taken__likes', function () {
+  const similarItems = '.' + $(this).attr('class').split(' ').filter(a => a!= 'liked').join('.');
+  $(similarItems).toggleClass('liked');
+  var likes = parseInt($(similarItems).attr('data-likes'));
+  if($(similarItems).hasClass('liked'))
+    likes++;
+  else
+    likes--;
+  $(similarItems).attr('data-likes', likes);
+  $(similarItems).find('.taken__likes-count').text(likes);
 });
 
 // burger menu logic
-$('#burger-button').on('click', function() {
+$('#burger-button').on('click', function () {
   $('.navbar-collapse').toggleClass('collapse');
   $(this).toggleClass('burger-active');
   $('.header').toggleClass('drop-shadow-expand');
@@ -115,7 +107,7 @@ function scrollCheck() {
   }
 
   // header shadow on scroll
-  if($('body')[0].getBoundingClientRect().top == 0) {
+  if ($('body')[0].getBoundingClientRect().top == 0) {
     $('.header').removeClass('drop-shadow');
   } else {
     $('.header').addClass('drop-shadow');
@@ -152,7 +144,7 @@ function changeStyle(targetId, result) {
 }
 
 // email form validation
-$("#email-form").submit(function(e) {
+$("#email-form").submit(function (e) {
   e.preventDefault();
   $('.alert-success').css({
     'padding': '3px',
@@ -161,22 +153,22 @@ $("#email-form").submit(function(e) {
 });
 
 // video button click behavior
-$('.share__video-button').on('click', function() {
+$('.share__video-button').on('click', function () {
   $(this).replaceWith(`<iframe class="share__video-button" width="${$(this).outerWidth()}" height="${$(this).outerHeight()}" src="https://www.youtube.com/embed/1FWK-TM0S08?si=91k-J66cvXiaMXw2&amp;controls=0;&autoplay=1;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`)
 })
 
 // download button behavior
 $('.cta-button').on('click', function () {
-  if($(this).hasClass('playstore')) {
+  if ($(this).hasClass('playstore')) {
     window.open('https://play.google.com/store/apps/details?id=com.adobe.lrmobile&hl=uk&pli=1');
   }
-  if($(this).hasClass('appstore')){
+  if ($(this).hasClass('appstore')) {
     window.open('https://apps.apple.com/ua/app/lightroom-%D0%B4%D0%BB%D1%8F-%D1%84%D0%BE%D1%82%D0%BE-%D1%96-%D0%B2%D1%96%D0%B4%D0%B5%D0%BE/id878783582?l=uk')
   }
 });
 
 // ancor behavior
-$('.nav-item a').on('click', function(e) {
+$('.nav-item a').on('click', function (e) {
   e.preventDefault();
 
   const headerHeight = $('header').outerHeight() - ($('#burger-button').css('display') == 'none' ? 0 : $('.navbar-collapse').outerHeight());
