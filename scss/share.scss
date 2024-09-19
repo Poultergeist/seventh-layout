@@ -116,12 +116,11 @@
 
     &__phone-slider {
       max-width: 400px;
-      padding: 0 70px;
       width: 100%;
       z-index: 1;
 
       &-wrapper {
-        height: 300px;
+        height: 398px;
         padding: 0;
         @include flex(row, stretch, center);
         z-index: 2;

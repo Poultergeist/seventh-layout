@@ -82,7 +82,7 @@
           background-color: white;
           top: -40px;
         }
-        
+
         &.active::before {
           height: 4px;
         }
@@ -108,7 +108,7 @@
     .navbar-nav {
       padding-top: 0.5rem;
       @include flex(column !important, center !important, center !important);
-  
+
       li {
         margin: 0.05rem 0 !important;
         font-size: 14px;
@@ -122,19 +122,19 @@
     .navbar-collapse {
       height: 175px;
     }
-  
+
     .navbar-brand {
       font-size: 40px;
     }
   }
+
+  .drop-shadow-expand {
+    box-shadow: 0 0 8px 5px;
+  }
 }
 
 .drop-shadow {
-
-  &,
-  &-expand {
-    box-shadow: 0 0 8px 5px;
-  }
+  box-shadow: 0 0 8px 5px;
 }
 
 .burger-active .navbar-toggler-icon div {
