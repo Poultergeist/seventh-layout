@@ -91,9 +91,9 @@ $('.taken__photos').on('click', '.taken__likes', function () {
 });
 
 // burger menu logic
-$('#burger-button').on('click', function () {
+$('#burger-button, .nav-item').on('click', function () {
   $('.navbar-collapse').toggleClass('collapse');
-  $(this).toggleClass('burger-active');
+  $('#burger-button').toggleClass('burger-active');
   $('.header').toggleClass('drop-shadow-expand');
 });
 

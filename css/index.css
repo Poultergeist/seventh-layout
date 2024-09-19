@@ -130,6 +130,7 @@ html::-webkit-scrollbar {
 
 @media screen and (max-width: 991px) {
   .header .navbar-nav {
+    padding-top: 0.5rem;
     display: flex;
     flex-direction: column !important;
     align-items: center !important;
