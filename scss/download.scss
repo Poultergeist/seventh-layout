@@ -102,7 +102,7 @@
 
     &__logo,
     &__info {
-      grid-column: 1/-1;
+      grid-column: 2/-2;
 
     }
 
@@ -111,6 +111,11 @@
 
       h1 {
         font-size: 30px;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
       }
     }
 
