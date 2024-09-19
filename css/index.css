@@ -480,9 +480,11 @@ html::-webkit-scrollbar {
   background-color: #de5d5d;
   width: 171px;
   font-size: 32px;
-  padding: 0 0.7rem !important;
   margin: 1px;
   border-radius: 0.28rem;
+}
+.share__video-button_padding {
+  padding: 0 0.7rem;
 }
 .share__slider {
   position: relative;
@@ -592,9 +594,11 @@ html::-webkit-scrollbar {
     height: auto;
   }
   .share__video-button {
-    padding: 0 0.3rem !important;
     font-size: 16px;
     width: 120px;
+  }
+  .share__video-button_padding {
+    padding: 0 0.3rem;
   }
 }
 @media screen and (max-width: 420px) {

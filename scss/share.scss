@@ -51,9 +51,12 @@
     background-color: $coral;
     width: 171px;
     font-size: 32px;
-    padding: 0 0.7rem !important;
     margin: 1px;
     border-radius: .28rem;
+    
+    &_padding {
+      padding: 0 0.7rem;
+    }
   }
 
   &__slider {
@@ -191,9 +194,12 @@
     }
 
     &__video-button {
-      padding: 0 0.3rem !important;
       font-size: 16px;
       width: 120px;
+      
+      &_padding {
+        padding: 0 0.3rem;
+      }
     }
   }
 }
