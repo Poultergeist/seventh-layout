@@ -1,3 +1,4 @@
+// sliders configuration
 $(document).ready(function () {
   $('.banner__slider').slick({
     arrows: false,
@@ -55,19 +56,19 @@ $(document).ready(function () {
     autoplay: false,
     responsive: [
       {
-        breakpoint: 1500,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3
         }
       },
       {
-        breakpoint: 1000,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2
         }
       },
       {
-        breakpoint: 500,
+        breakpoint: 400,
         settings: {
           slidesToShow: 1
         }
@@ -76,6 +77,7 @@ $(document).ready(function () {
   });
 });
 
+// likes logic
 const likes = document.querySelectorAll(".taken__likes");
 
 likes.forEach(like => {
@@ -96,12 +98,14 @@ likes.forEach(like => {
   })
 });
 
+// burger menu logic
 $('#burger-button').on('click', function() {
   $('.navbar-collapse').toggleClass('collapse');
   $(this).toggleClass('burger-active');
   $('.header').toggleClass('drop-shadow-expand');
 });
 
+// active section behavior
 window.addEventListener("scroll", scrollCheck);
 
 function scrollCheck() {
@@ -110,6 +114,7 @@ function scrollCheck() {
     targetsVisibilityCheck(targets[i], targets[i - 1], targets[i + 1])
   }
 
+  // header shadow on scroll
   if($('body')[0].getBoundingClientRect().top == 0) {
     $('.header').removeClass('drop-shadow');
   } else {
@@ -117,8 +122,10 @@ function scrollCheck() {
   }
 }
 
+// initialisation of scroll behavion with delay
 setTimeout(scrollCheck, 10);
 
+// getting active section
 function targetsVisibilityCheck(target, prevTarget, nextTarget) {
   const rect = target.getBoundingClientRect();
   const prevRect = prevTarget != undefined ? prevTarget.getBoundingClientRect() : 0;
@@ -134,7 +141,7 @@ function targetsVisibilityCheck(target, prevTarget, nextTarget) {
     changeStyle(target.id, (prevRect.bottom < 100 && rect.bottom >= 100));
 }
 
-
+// style change on active ancor
 function changeStyle(targetId, result) {
   if (result) {
     document.getElementById(`${targetId}-ancor`).classList.add("active");
@@ -144,6 +151,7 @@ function changeStyle(targetId, result) {
   }
 }
 
+// email form validation
 $("#email-form").submit(function(e) {
   e.preventDefault();
   $('.alert-success').css({
@@ -152,10 +160,12 @@ $("#email-form").submit(function(e) {
   });
 });
 
+// video button click behavior
 $('.share__video-button').on('click', function() {
   $(this).replaceWith(`<iframe class="share__video-button" width="${$(this).outerWidth()}" height="${$(this).outerHeight()}" src="https://www.youtube.com/embed/1FWK-TM0S08?si=91k-J66cvXiaMXw2&amp;controls=0;&autoplay=1;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`)
 })
 
+// download button behavior
 $('.cta-button').on('click', function () {
   if($(this).hasClass('playstore')) {
     window.open('https://play.google.com/store/apps/details?id=com.adobe.lrmobile&hl=uk&pli=1');
@@ -163,4 +173,15 @@ $('.cta-button').on('click', function () {
   if($(this).hasClass('appstore')){
     window.open('https://apps.apple.com/ua/app/lightroom-%D0%B4%D0%BB%D1%8F-%D1%84%D0%BE%D1%82%D0%BE-%D1%96-%D0%B2%D1%96%D0%B4%D0%B5%D0%BE/id878783582?l=uk')
   }
-})
+});
+
+// ancor behavior
+$('.nav-item a').on('click', function(e) {
+  e.preventDefault();
+
+  const headerHeight = $('header').outerHeight() - ($('#burger-button').css('display') == 'none' ? 0 : $('.navbar-collapse').outerHeight());
+
+  $('html, body').animate({
+    scrollTop: $($(this).attr('href')).offset().top - headerHeight
+  }, 300, 'easeOutQuad')
+});

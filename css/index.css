@@ -15,7 +15,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -1040,7 +1039,6 @@ html::-webkit-scrollbar {
     justify-content: space-evenly !important;
   }
   .download button {
-    height: 90% !important;
     padding: 0 10px !important;
   }
   .download button svg {
