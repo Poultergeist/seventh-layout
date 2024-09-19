@@ -108,23 +108,25 @@ html::-webkit-scrollbar {
   position: relative;
 }
 .header .navbar-nav li::before {
-  transition: height 0.3s ease;
+  transition: height 0.3s ease, width 0.3s ease, left 0.3s ease;
   position: absolute;
   content: "";
-  width: 100%;
+  width: 20%;
   height: 0;
   background-color: white;
   top: -40px;
+  left: 60%;
 }
 .header .navbar-nav li.active::before {
-  height: 4px;
+  height: 6px;
+  width: 160%;
+  left: -30%;
 }
 .header .navbar-nav li:not(:last-child) {
   margin-right: 2.55rem;
 }
 .header .navbar-collapse {
   transition: height 0.3s ease;
-  overflow: hidden;
   height: 100%;
 }
 
@@ -145,6 +147,7 @@ html::-webkit-scrollbar {
   }
   .header .navbar-collapse {
     height: 175px;
+    overflow: hidden;
   }
   .header .navbar-brand {
     font-size: 40px;
@@ -772,8 +775,8 @@ html::-webkit-scrollbar {
 }
 @media screen and (max-width: 550px) {
   .features {
-    height: 351px;
-    padding-top: 0.95rem;
+    height: 361px;
+    padding: 0.95rem 0;
   }
   .features__phone {
     padding: 0;
@@ -787,7 +790,7 @@ html::-webkit-scrollbar {
   }
   .features__slider-wrapper {
     height: auto;
-    box-shadow: 100px 10px 0 0 #313131;
+    box-shadow: none;
     margin-top: 1.15rem;
     width: 90%;
   }
@@ -1054,6 +1057,9 @@ html::-webkit-scrollbar {
   .download__info h1 {
     font-size: 30px;
   }
+  .download__info h2 {
+    padding-right: 30px;
+  }
   .download__info h1,
   .download__info h2 {
     text-align: center;
@@ -1061,6 +1067,9 @@ html::-webkit-scrollbar {
   .download__cta {
     width: 100%;
     justify-content: space-evenly !important;
+  }
+  .download__cta button {
+    margin: 0;
   }
   .download button {
     padding: 0 10px !important;
@@ -1078,6 +1087,18 @@ html::-webkit-scrollbar {
     object-position: center;
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (max-width: 566px) {
+  .download {
+    padding-bottom: 2.5rem;
+  }
+  .download__cta {
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+  }
+  .download__cta button {
+    padding: 5px 8px 5px 4px !important;
   }
 }
 /* compability */

@@ -74,17 +74,20 @@
         position: relative;
 
         &::before {
-          transition: height 0.3s ease;
+          transition: height 0.3s ease, width 0.3s ease, left 0.3s ease;
           position: absolute;
           content: '';
-          width: 100%;
+          width: 20%;
           height: 0;
           background-color: white;
           top: -40px;
+          left: 60%;
         }
 
         &.active::before {
-          height: 4px;
+          height: 6px;
+          width: 160%;
+          left: -30%;
         }
 
         &:not(:last-child) {
@@ -96,7 +99,6 @@
 
     &-collapse {
       transition: height 0.3s ease;
-      overflow: hidden;
       height: 100%
     }
   }
@@ -121,6 +123,7 @@
 
     .navbar-collapse {
       height: 175px;
+      overflow: hidden;
     }
 
     .navbar-brand {

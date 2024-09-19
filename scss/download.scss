@@ -113,6 +113,10 @@
         font-size: 30px;
       }
 
+      h2 {
+        padding-right: 30px;
+      }
+
       h1,
       h2 {
         text-align: center;
@@ -122,6 +126,10 @@
     &__cta {
       width: 100%;
       justify-content: space-evenly !important;
+
+      button {
+        margin: 0;
+      }
     }
 
     button {
@@ -142,6 +150,20 @@
         object-position: center;
         width: 100%;
         height: 100%
+      }
+    }
+  }
+}
+
+@include adaptive(566px) {
+  .download {
+    padding-bottom: 2.5rem;
+    &__cta {
+      flex-direction: column !important;
+      flex-wrap: nowrap;
+
+      button {
+        padding: 5px 8px 5px 4px !important;
       }
     }
   }

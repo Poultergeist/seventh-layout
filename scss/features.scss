@@ -177,8 +177,8 @@
 
 @include adaptive(550px) {
   .features {
-    height: 351px;
-    padding-top: 0.95rem;
+    height: 361px;
+    padding: 0.95rem 0;
 
     &__phone {
       padding: 0;
@@ -194,7 +194,7 @@
 
       &-wrapper {
         height: auto;
-        box-shadow: 100px 10px 0 0 $gray;
+        box-shadow: none;
         margin-top: 1.15rem;
         width: 90%;
       }
