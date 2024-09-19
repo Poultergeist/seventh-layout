@@ -301,7 +301,7 @@ html::-webkit-scrollbar {
   }
   .banner__cta button {
     border-width: 2px !important;
-    padding: 0 6px;
+    padding: 0 6px !important;
     height: 58px;
     width: 200px;
     font-size: 25px;
@@ -329,11 +329,12 @@ html::-webkit-scrollbar {
   }
   .banner__cta button {
     border: 2px white solid;
-    height: 40px;
+    height: 40px !important;
     font-size: 20px;
     width: 150px;
+    min-width: auto;
   }
-  .banner__cta svg {
+  .banner__cta button svg {
     margin-top: 1px;
     height: 30px;
     width: 35px;
@@ -437,7 +438,6 @@ html::-webkit-scrollbar {
   overflow: hidden;
 }
 .share__phone-slider-wrapper {
-  overflow: hidden;
   padding-right: 5rem;
   grid-column: span 6;
 }
@@ -538,6 +538,9 @@ html::-webkit-scrollbar {
   .share__phone-slider-wrapper, .share__content {
     grid-column: 1/-1;
   }
+  .share__phone-slider-wrapper h1, .share__phone-slider-wrapper h2, .share__content h1, .share__content h2 {
+    text-align: center !important;
+  }
   .share__phone-slider {
     max-width: 400px;
     width: 100%;
@@ -553,7 +556,8 @@ html::-webkit-scrollbar {
     z-index: 2;
   }
   .share__content {
-    box-shadow: 0 -20px 20px 20px #262626;
+    background: linear-gradient(0deg, #262626 50%, rgba(38, 38, 38, 0.8) 100%);
+    box-shadow: 0 -20px 20px 20px rgba(38, 38, 38, 0.8);
     position: inherit !important;
     z-index: 2;
   }
@@ -775,7 +779,7 @@ html::-webkit-scrollbar {
 }
 @media screen and (max-width: 550px) {
   .features {
-    height: 361px;
+    height: 371px;
     padding: 0.95rem 0;
   }
   .features__phone {
@@ -783,7 +787,7 @@ html::-webkit-scrollbar {
     height: 300px;
   }
   .features__slider {
-    height: 100px;
+    height: 110px;
   }
   .features__slider.pt-4 {
     padding-top: 1rem !important;
@@ -796,8 +800,7 @@ html::-webkit-scrollbar {
   }
   .features__slider .slick-dots {
     margin-top: 10px;
-    padding: 3px;
-    padding-left: 5px;
+    padding: 8px;
   }
   .features__slider .slick-dots button {
     width: 8px;
@@ -1069,14 +1072,19 @@ html::-webkit-scrollbar {
     justify-content: space-evenly !important;
   }
   .download__cta button {
-    margin: 0;
+    border-width: 2px !important;
+    padding: 0 6px !important;
+    height: 58px;
+    width: 200px;
+    font-size: 25px;
   }
-  .download button {
-    padding: 0 10px !important;
-  }
-  .download button svg {
-    width: 40px;
+  .download__cta svg {
     height: 40px;
+  }
+  .download__cta button {
+    margin: 0;
+    padding-bottom: 3px !important;
+    padding-top: 2px !important;
   }
   .download__image {
     width: 170px;
@@ -1098,7 +1106,16 @@ html::-webkit-scrollbar {
     flex-wrap: nowrap;
   }
   .download__cta button {
-    padding: 5px 8px 5px 4px !important;
+    border: 2px white solid;
+    height: 40px !important;
+    font-size: 20px;
+    width: 150px;
+    min-width: auto;
+  }
+  .download__cta button svg {
+    margin-top: 1px;
+    height: 30px;
+    width: 35px;
   }
 }
 /* compability */

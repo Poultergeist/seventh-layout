@@ -113,17 +113,7 @@
       justify-content: space-evenly !important;
       grid-column: 1/13;
 
-      button {
-        border-width: 2px !important;
-        padding: 0 6px;
-        height: 58px;
-        width: 200px;
-        font-size: 25px;
-      }
-
-      svg {
-        height: 40px;
-      }
+      @include button-middle-adaptive;
     }
   }
 }
@@ -147,18 +137,7 @@
       padding-top: 21px;
       padding-bottom: 25px;
 
-      button {
-        border: 2px white solid;
-        height: 40px;
-        font-size: 20px;
-        width: 150px;
-      }
-
-      svg {
-        margin-top: 1px;
-        height: 30px;
-        width: 35px;
-      }
+      @include button-adaptive;
     }
 
     &__slider {

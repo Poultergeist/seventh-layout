@@ -177,7 +177,7 @@
 
 @include adaptive(550px) {
   .features {
-    height: 361px;
+    height: 371px;
     padding: 0.95rem 0;
 
     &__phone {
@@ -186,7 +186,7 @@
     }
 
     &__slider {
-      height: 100px;
+      height: 110px;
 
       &.pt-4 {
         padding-top: 1rem !important;
@@ -201,8 +201,7 @@
 
       .slick-dots {
         margin-top: 10px;
-        padding: 3px;
-        padding-left: 5px;
+        padding: 8px;
 
         button {
           width: 8px;
