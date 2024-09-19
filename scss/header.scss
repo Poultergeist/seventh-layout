@@ -148,7 +148,7 @@
   }
 
   &:first-child {
-    transform: rotate(30deg);
+    transform: rotate(45deg) translate(0, -4.5px);
   }
 
   &:nth-child(2) {
@@ -157,6 +157,6 @@
   }
 
   &:last-child {
-    transform: rotate(-30deg);
+    transform: rotate(-45deg) translate(0, 4.5px);
   }
 }

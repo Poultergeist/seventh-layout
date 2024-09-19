@@ -161,14 +161,14 @@ html::-webkit-scrollbar {
   border-radius: 0.1rem;
 }
 .burger-active .navbar-toggler-icon div:first-child {
-  transform: rotate(30deg);
+  transform: rotate(45deg) translate(0, -4.5px);
 }
 .burger-active .navbar-toggler-icon div:nth-child(2) {
   opacity: 0;
   margin: 0.15rem 1rem;
 }
 .burger-active .navbar-toggler-icon div:last-child {
-  transform: rotate(-30deg);
+  transform: rotate(-45deg) translate(0, 4.5px);
 }
 
 /* banner */
